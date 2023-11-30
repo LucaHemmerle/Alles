@@ -23,8 +23,8 @@
 */
 
 .vfrc-header {
-  background: #3c393d; /* Dunkelgrau */
-  color: #ffffff; /* Weiß */
+  background: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
   border-radius: 25px;
 }
 
@@ -56,8 +56,8 @@
 /* .vfrc-chat--status {} */
 
 .vfrc-message {
-  background-color: #c5c7ca; /* Hellgrau */
-  color: #3c393d; /* Dunkelgrau */
+  background-color: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
   border-radius: 7.5px;
 }
 
@@ -81,13 +81,13 @@
 /* .vfrc-system-response--actions {} */
 
 .vfrc-button {
-  background-color: #f39206; /* Orange */
-  color: #ffffff; /* Weiß */
+  background-color: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #3c393d; /* Dunkelgrau */
+  background-color: #0000ff; /* Blau */
 }
 
 /* .vfrc-image {} */
@@ -106,8 +106,8 @@
 
 /* Targeted styling for just the Assistant messages. */
 .vfrc-system-response .vfrc-message {
-  background-color: #ffffff; /* Weiß */
-  color: #3c393d; /* Dunkelgrau */
+  background-color: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
 }
 
 /* Targeted styling for just the Assistant buttons. */
@@ -124,8 +124,8 @@
 
 /* Targeted styling for just the User messages */
 .vfrc-user-response .vfrc-message {
-  background-color: #f39206; /* Orange */
-  color: #ffffff; /* Weiß */
+  background-color: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
 }
 
 
@@ -136,8 +136,8 @@
 */
 
 .vf-footer {
-  background: #c5c7ca; /* Hellgrau */
-  color: #ffffff; /* Weiß */
+  background: #0000ff; /* Blau */
+  color: #0000ff; /* Blau */
 }
 
 /* .vfrc-input {} */
