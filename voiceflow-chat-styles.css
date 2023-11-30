@@ -1,147 +1,53 @@
-/* use this file to override default styles when forking this repository */
+/* Voiceflow Chat Styles basierend auf Botpress-CSS */
 
-/*
-  PAGE CONTENTS
-
-  Customize the page that the chat bubble lives on
-*/
-
-/* .voiceflow-chat {} */
-
-/* .vfrc-launcher {} */
-
-/* .vfrc-chat--overlay {} */
-
-/* .vfrc-prompt {} */
-
-
-/*
-  CHAT WIDGET HEADER
-
-  Customize the content, controls and styling included in your chat widget header, including the Assistant Information.
-  Note that changes to the assistant information here will be shared across other elements that consume this styling.
-*/
-
+/* CHAT WIDGET HEADER - Kopfzeile des Chats */
 .vfrc-header {
-  background: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
+  background: #3c393d; /* Dunkelgrau */
+  color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
 
-/* .vfrc-assistant-info {} */
-
-/* .vfrc-assistant-info--title {} */
-
-/* .vfrc-assistant-info--description {} */
-
-/* .vfrc-avatar {} */
-
-/* .vfrc-icon {} */
-
-
-/*
-  CHAT MESSAGE BODY
-
-  Customize the layout and display of the chat body, and the conversation's metadata
-*/
-
-/* .vfrc-chat {} */
-
-/* .vfrc-chat--dialog {} */
-
-/* .vfrc-chat--spacer {} */
-
-/* .vfrc-chat--session-time {} */
-
-/* .vfrc-chat--status {} */
-
+/* CHAT MESSAGE BODY - Nachrichten im Chat */
 .vfrc-message {
-  background-color: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
+  background-color: #c5c7ca; /* Hellgrau für Nachrichten vom Assistenten */
+  color: #3c393d; /* Dunkelgrau für Text */
   border-radius: 7.5px;
 }
 
-/* .vfrc-timestamp {} */
+/* ASSISTANT RESPONSES - Antworten des Assistenten */
+.vfrc-system-response .vfrc-message {
+  background-color: #ffffff; /* Weiß für Nachrichten vom Assistenten */
+  color: #3c393d; /* Dunkelgrau für Text */
+}
 
+/* USER RESPONSES - Nutzer-Nachrichten */
+.vfrc-user-response .vfrc-message {
+  background-color: #f39206; /* Orange für Nutzer-Nachrichten */
+  color: #ffffff; /* Weiß für Text */
+}
 
-/*
-  ASSISTANT RESPONSES
-
-  Customize the style and layout of assistant response messages.
-*/
-
-/* .vfrc-system-response--indicator {} */
-
-/* .vfrc-system-response {} */
-
-/* .vfrc-system-response--controls {} */
-
-/* .vfrc-system-response--list {} */
-
-/* .vfrc-system-response--actions {} */
-
+/* BUTTONS - Schaltflächen */
 .vfrc-button {
-  background-color: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
+  background-color: #f39206; /* Orange */
+  color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #0000ff; /* Blau */
+  background-color: #3c393d; /* Dunkelgrau beim Hover */
 }
 
-/* .vfrc-image {} */
-
-/* .vfrc-image--background {} */
-
-/* .vfrc-card--content {} */
-
-/* .vfrc-card--header {} */
-
-/* .vfrc-card--description {} */
-
-/* .vfrc-carousel {} */
-
-/* .vfrc-carousel--button {} */
-
-/* Targeted styling for just the Assistant messages. */
-.vfrc-system-response .vfrc-message {
-  background-color: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
-}
-
-/* Targeted styling for just the Assistant buttons. */
-.vfrc-system-response .vfrc-button {}
-
-
-/*
-  USER RESPONSES
-
-  Customize the style and layout of users response messages.
-*/
-
-/* .vfrc-user-response {} */
-
-/* Targeted styling for just the User messages */
-.vfrc-user-response .vfrc-message {
-  background-color: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
-}
-
-
-/*
-  FOOTER
-
-  Customize the layout and appearance of the message input field and the VF Branding
-*/
-
+/* FOOTER - Fußzeile */
 .vf-footer {
-  background: #0000ff; /* Blau */
-  color: #0000ff; /* Blau */
+  background: #c5c7ca; /* Hellgrau */
+  color: #ffffff; /* Weiß */
 }
 
-/* .vfrc-input {} */
+/* INPUT FELD - Eingabefeld */
+.vfrc-input {
+  background-color: #ffffff; /* Weiß */
+  color: #3c393d; /* Dunkelgrau */
+  border: 1px solid #3c393d; /* Dunkelgraue Umrandung */
+}
 
-/* .vfrc-chat-input--button {} */
-
-/* .vfrc-footer--watermark {} */
+/* Zusätzliche Anpassungen können basierend auf spezifischen Elementen von Botpress hinzugefügt werden */
