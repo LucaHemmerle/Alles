@@ -1,274 +1,86 @@
-/* Setzt die Standard-Schriftgröße des gesamten Dokuments */
-html {
+
+/* Voiceflow Chat Styles basierend auf Botpress-CSS */
+/* Anpassung der Schriftgröße und allgemeinen Stile */
+.voiceflow-chat {
   font-size: 16px;
+  color: #3c393d; /* Dunkelgrau */
 }
 
-/* Setzt die Textausrichtung des Absatzes (RTL oder LTR) */
-.voiceflow-chat p,
-.voiceflow-chat .vfrc-message-user,
-.voiceflow-chat .vfrc-message-bot {
-  direction: ltr;
-}
-
-/* Anpassung der Eingabefeldfarbe */
-.voiceflow-chat .vfrc-input {
-  color: #ffffff; /* Weiß */
-}
-
-/* Anpassung des Indikators für neue Nachrichten */
-.voiceflow-chat .vfrc-new-messages-indicator {
-  background-color: #3c393d; /* Dunkelgrau */
-  color: #ffffff; /* Weiß */
-}
-
+/* CHAT WIDGET HEADER - Kopfzeile des Chats */
 /* Anpassung des Chat-Widget-Headers */
-.voiceflow-chat .vfrc-header {
-  margin: 10px;
+.vfrc-header {
   background: #3c393d; /* Dunkelgrau */
+  color: #ffffff; /* Weiß */
   border-radius: 25px;
-  position: relative;
-  overflow: hidden;
   border: 1px solid transparent;
-  color: #ffffff; /* Weiß */
 }
 
-/* Anpassung des Namens im Header */
-.voiceflow-chat .vfrc-header-name {
-  color: #ffffff; /* Weiß */
-}
-
-/* Anpassung der Tipp-Blase */
-.voiceflow-chat .vfrc-typing-bubble {
-  background: #3c393d; /* Dunkelgrau */
-}
-
-/* Anpassung des Inhalts der Chat-Blase */
-.voiceflow-chat .vfrc-chat-bubble-content {
+/* CHAT MESSAGE BODY - Nachrichten im Chat */
+/* Anpassung der Nachrichtenblasen */
+.vfrc-message {
+  background-color: #c5c7ca; /* Hellgrau für Nachrichten vom Assistenten */
+  color: #3c393d; /* Dunkelgrau für Text */
   background-color: #ffffff; /* Weiß */
+  color: #3c393d; /* Dunkelgrau */
   border-radius: 7.5px;
   border: 1px solid transparent;
 }
 
-/* Anpassung von Datum, Header-Name und Untertitel */
-.voiceflow-chat .vfrc-date-container,
-.voiceflow-chat .vfrc-header-name,
-.voiceflow-chat .vfrc-header-subtitle {
-  color: #ffffff; /* Weiß */
+/* ASSISTANT RESPONSES - Antworten des Assistenten */
+.vfrc-system-response .vfrc-message {
+  background-color: #ffffff; /* Weiß für Nachrichten vom Assistenten */
+  color: #3c393d; /* Dunkelgrau für Text */
 }
 
-/* Anpassung des Layouts des Chat-Widgets */
-.voiceflow-chat .vfrc-layout {
-  width: 320px !important;
-  height: 84vh;
-  border-radius: 25px;
-  right: 10px;
-  bottom: 5px;
-  border: 1px solid transparent;
-}
-
-/* Anpassung des Layouts für mobile Geräte */
-@media screen and (max-device-width: 767px) {
-  .voiceflow-chat .vfrc-layout {
-    width: 100% !important;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    border-radius: 0;
-  }
-}
-
-/* Anpassung der Header-Icons */
-.voiceflow-chat .vfrc-header-icon,
-.voiceflow-chat .vfrc-header-icon svg,
-.voiceflow-chat .vfrc-header-icon svg path {
-  fill: #ffffff; /* Weiß */
-}
-
-/* Anpassung des Platzhalters im Eingabefeld */
-.voiceflow-chat #input-message::placeholder {
-  color: rgba(255,255,255,.50); /* Halbtransparentes Weiß */
-}
-
-/* Anpassung des Textbereichs im Komponisten */
-.voiceflow-chat .bpw-composer textarea {
-  outline: none !important;
-  background-color: #ffffff; /* Weiß */
-  border: 1px solid #3c393d; /* Dunkelgrau */
-  color: #3c393d !important; /* Dunkelgrau */
-}
-
-/* Anpassung des Textbereichs im Fokus */
-.voiceflow-chat .bpw-composer textarea:focus {
-  outline: none !important;
-  background-color: #ffffff; /* Weiß */
-  border: 1px solid #3c393d; /* Dunkelgrau */
-  color: #3c393d !important; /* Dunkelgrau */
-}
-
-/* Anpassung der Tastatur-Einzelauswahl */
-.voiceflow-chat .bpw-keyboard-single-choice {
-  background-color: #ffffff; /* Weiß */
-  border: none;
-}
-
-/* Anpassung der Schaltflächen */
-.voiceflow-chat .bpw-button,
-.voiceflow-chat .bpw-button-alt {
-  background-color: #f39206; /* Dunkelgrau */
-  color: #ffff; /* Orange */
-  border-radius: 25px;
-  border: none;
-}
-
-/* Anpassung der Schaltflächen beim Hover */
-.voiceflow-chat .bpw-button:hover,
-.voiceflow-chat .bpw-button-alt:hover {
-  background-color: #3c393d; /* Dunkelgrau */
-}
-
-/* Anpassung von Links */
-.voiceflow-chat a {
-  color: #ffffff; /* Weiß */
-  text-decoration: underline;
-}
-
-/* Anpassung des Chat-Containers */
-.voiceflow-chat .bpw-chat-container {
-  background-color: #ffffff; /* Weiß */
-  scrollbar-width: thin;
-  scrollbar-color: #3c393d #c5c7ca; /* Dunkelgrau und Hellgrau */
-  border: none;
-}
-
-/* Anpassung der Chat-Blaseninhalte */
-.voiceflow-chat .bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
-  background-color: #c5c7ca; /* Hellgrau */
-  color: #3c393d; /* Weiß */
-}
-
-.voiceflow-chat .bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
+/* USER RESPONSES - Nutzer-Nachrichten */
+.vfrc-user-response .vfrc-message {
+  background-color: #f39206; /* Orange für Nutzer-Nachrichten */
+  color: #ffffff; /* Weiß für Text */
+/* Anpassung der Eingabeaufforderung */
+.vfrc-prompt {
   background-color: #f39206; /* Orange */
   color: #ffffff; /* Weiß */
+  border-radius: 25px;
 }
 
-/* Anpassung des Scrollbars */
-.voiceflow-chat .bpw-chat-container::-webkit-scrollbar,
-.voiceflow-chat .bpw-chat-container::-moz-scrollbar {
-  width: 10px;
-  background-color: #f39206; /* Dunkelgrau */
-  border: none;
+/* BUTTONS - Schaltflächen */
+/* Anpassung der Schaltflächen */
+.vfrc-button {
+  background-color: #f39206; /* Orange */
+  color: #ffffff; /* Weiß */
+  border-radius: 25px;
 }
 
-/* Anpassung des Bot-Avatars */
-.voiceflow-chat .bpw-bot-avatar img,
-.voiceflow-chat .bpw-bot-avatar svg {
+.vfrc-button:hover {
+  background-color: #3c393d; /* Dunkelgrau beim Hover */
+/* Anpassung des Chat-Containers */
+.vfrc-chat {
+  background-color: #ffffff; /* Weiß */
+  scrollbar-color: #3c393d #c5c7ca; /* Dunkelgrau und Hellgrau */
+}
+
+/* Anpassung der Avatar-Bilder */
+.vfrc-avatar img {
   background: #f39206; /* Orange */
   border: 1px solid #3c393d; /* Dunkelgrau */
 }
 
-/* Anpassung des Scrollbar-Tracks */
-.voiceflow-chat ::-webkit-scrollbar-track,
-.voiceflow-chat .bpw-chat-container::-webkit-scrollbar-track,
-.voiceflow-chat .bpw-chat-container::-moz-scrollbar-track {
-  background-color: transparent;
-}
-
-/* Anpassung des Scrollbar-Thumb */
-.voiceflow-chat ::-webkit-scrollbar-thumb,
-.voiceflow-chat .bpw-chat-container::-webkit-scrollbar-thumb,
-.voiceflow-chat .bpw-chat-container::-moz-scrollbar-thumb {
-  background-color: #c5c7ca; /* Hellgrau */
-  border-radius: 1rem;
-  border: 0.5rem solid transparent;
-}
-
-/* Anpassung des schwebenden Buttons */
-.voiceflow-chat .bpw-floating-button i svg path {
-  fill: #ffffff; /* Weiß */
-}
-
-/* Anpassung des Powered-by-Bereichs */
-.voiceflow-chat .bpw-powered {
-  text-align: center;
-  padding: 10px;
-  color: #ffffff; /* Weiß */
+/* FOOTER - Fußzeile */
+/* Anpassung der Fußzeile */
+.vf-footer {
   background: #c5c7ca; /* Hellgrau */
-  font-size: 14px;
+  color: #ffffff; /* Weiß */
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 
-/* Anpassung des Powered-by-Links */
-.voiceflow-chat .bpw-powered a {
-  color: #ffffff; /* Weiß */
-  text-decoration: underline;
+/* INPUT FELD - Eingabefeld */
+.vfrc-input {
+  background-color: #ffffff; /* Weiß */
+  color: #3c393d; /* Dunkelgrau */
+  border: 1px solid #3c393d; /* Dunkelgraue Umrandung */
 }
+/* Weitere spezifische Anpassungen können hier hinzugefügt werden */
 
-.voiceflow-chat .bpw-powered a:hover {
-  text-decoration: underline;
-}
-
-/* Anpassung des Senden-Buttons */
-.voiceflow-chat .bpw-send-button {
-  background: #3c393d; /* Dunkelgrau */
-}
-
-/* Anpassung des Widget-Buttons */
-.voiceflow-chat .bpw-widget-btn {
-  border-radius: 50%;
-  background: #f39206; /* Orange */
-}
-
-/* Anpassung des schwebenden Buttons vor dem Hover */
-.voiceflow-chat .bpw-floating-button::before {
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='white' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 45px 45px;
-  height: 60px;
-  width: 60px;
-  border: none;
-}
-
-/* Anpassung der Größe und Animation des schwebenden Buttons */
-.voiceflow-chat .bpw-floating-button {
-  width: 60px;
-  height: 60px;
-  box-shadow: none !important;
-  animation: pulse 3s infinite;
-  margin: 10px;
-  padding: 20px;
-  position: relative;
-}
-
-/* Anpassung des schwebenden Buttons beim Hover */
-.voiceflow-chat .bpw-floating-button:hover {
-  box-shadow: none !important;
-}
-
-/* Animation für den schwebenden Button */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-/* Anpassung der Kartenaktion */
-.voiceflow-chat .bpw-card-action {
-  background-color: #000000 !important; /* Schwarz */
-  color: #3c393d !important; /* Dunkelgrau */
-}
-
-/* Anpassung des Layouts */
-.voiceflow-chat .bpw-layout {
-  overflow: visible; /* Erlaubt dem Inhalt, außerhalb des Elements sichtbar zu sein */
-}
-
-/* Anpassung des Dropdown-Menüs für schnelle Antworten */
-.voiceflow-chat .bpw-keyboard-quick_reply-dropdown {
-  background-color: #000000 !important; /* Schwarz */
-  color: #3c393d !important; /* Dunkelgrau */
-}
+/* Zusätzliche Anpassungen können basierend auf spezifischen Elementen von Botpress hinzugefügt werden */
+/* ... */
