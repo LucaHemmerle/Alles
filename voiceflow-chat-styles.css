@@ -1,53 +1,59 @@
-/* Voiceflow Chat Styles basierend auf Botpress-CSS */
+/* Anpassung der Schriftgröße und allgemeinen Stile */
+.voiceflow-chat {
+  font-size: 16px;
+  color: #3c393d; /* Dunkelgrau */
+}
 
-/* CHAT WIDGET HEADER - Kopfzeile des Chats */
+/* Anpassung des Chat-Widget-Headers */
 .vfrc-header {
   background: #3c393d; /* Dunkelgrau */
   color: #ffffff; /* Weiß */
   border-radius: 25px;
+  border: 1px solid transparent;
 }
 
-/* CHAT MESSAGE BODY - Nachrichten im Chat */
+/* Anpassung der Nachrichtenblasen */
 .vfrc-message {
-  background-color: #c5c7ca; /* Hellgrau für Nachrichten vom Assistenten */
-  color: #3c393d; /* Dunkelgrau für Text */
+  background-color: #ffffff; /* Weiß */
+  color: #3c393d; /* Dunkelgrau */
   border-radius: 7.5px;
+  border: 1px solid transparent;
 }
 
-/* ASSISTANT RESPONSES - Antworten des Assistenten */
-.vfrc-system-response .vfrc-message {
-  background-color: #ffffff; /* Weiß für Nachrichten vom Assistenten */
-  color: #3c393d; /* Dunkelgrau für Text */
+/* Anpassung der Eingabeaufforderung */
+.vfrc-prompt {
+  background-color: #f39206; /* Orange */
+  color: #ffffff; /* Weiß */
+  border-radius: 25px;
 }
 
-/* USER RESPONSES - Nutzer-Nachrichten */
-.vfrc-user-response .vfrc-message {
-  background-color: #f39206; /* Orange für Nutzer-Nachrichten */
-  color: #ffffff; /* Weiß für Text */
-}
-
-/* BUTTONS - Schaltflächen */
+/* Anpassung der Schaltflächen */
 .vfrc-button {
   background-color: #f39206; /* Orange */
   color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
 
-.vfrc-button:hover {
-  background-color: #3c393d; /* Dunkelgrau beim Hover */
+/* Anpassung des Chat-Containers */
+.vfrc-chat {
+  background-color: #ffffff; /* Weiß */
+  scrollbar-color: #3c393d #c5c7ca; /* Dunkelgrau und Hellgrau */
 }
 
-/* FOOTER - Fußzeile */
+/* Anpassung der Avatar-Bilder */
+.vfrc-avatar img {
+  background: #f39206; /* Orange */
+  border: 1px solid #3c393d; /* Dunkelgrau */
+}
+
+/* Anpassung der Fußzeile */
 .vf-footer {
   background: #c5c7ca; /* Hellgrau */
   color: #ffffff; /* Weiß */
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
-/* INPUT FELD - Eingabefeld */
-.vfrc-input {
-  background-color: #ffffff; /* Weiß */
-  color: #3c393d; /* Dunkelgrau */
-  border: 1px solid #3c393d; /* Dunkelgraue Umrandung */
-}
+/* Weitere spezifische Anpassungen können hier hinzugefügt werden */
 
-/* Zusätzliche Anpassungen können basierend auf spezifischen Elementen von Botpress hinzugefügt werden */
+/* ... */
