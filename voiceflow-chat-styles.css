@@ -72,12 +72,12 @@
 }
 
 .vfrc-launcher {
-  transform: scale(1.6); /* Grundgröße um 60% erhöhen */
+  transform: scale(1.2); /* Grundgröße um 60% erhöhen */
   animation: pulse 2s infinite;
 }
 
 .vfrc-launcher img {
-  transform: scale(1.6); /* Vergrößert nur das Bild um 60% */
+  transform: scale(1.4); /* Vergrößert nur das Bild um 60% */
 }
 
 
