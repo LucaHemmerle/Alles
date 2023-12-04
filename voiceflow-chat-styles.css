@@ -13,7 +13,7 @@
   border-top-right-radius: 25px;
   border: 1px solid transparent;
   margin-top: 10px;
-  width: 200px !important;
+  width: 260px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -87,10 +87,10 @@
 }
 .vfrc-chat, .vfrc-chat--overlay {
   width: 320px ;
-  height: 700px !important;/* Erhöhte feste Höhe in Pixel */
+  height: 800px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 12px;
-  bottom: 100px;
+  bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
 }
