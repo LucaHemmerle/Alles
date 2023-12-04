@@ -81,12 +81,20 @@
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
 .vfrc-chat, .vfrc-chat--overlay {
-  width: 300px; /* Reduzierte Breite */
-  height: 80%; /* Erhöhte Höhe */
+   width: 320px !important;
+  height: 84vh;
+  border-radius: 25px;
+  right: 10px;
+  bottom: 5px;
+  border: 1px solid transparent; /* unchanged */
 }
 .vfrc-chat--dialog {
-  width: 300px; /* Reduzierte Breite */
-  height: 80%; /* Erhöhte Höhe */
+  width: 320px !important;
+  height: 84vh;
+  border-radius: 25px;
+  right: 10px;
+  bottom: 5px;
+  border: 1px solid transparent; /* unchanged */
 }
 
 
