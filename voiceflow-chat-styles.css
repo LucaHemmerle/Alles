@@ -80,6 +80,14 @@
 .vfrc-launcher img {
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
+.vfrc-chat, .vfrc-chat--overlay {
+  width: 300px; /* Reduzierte Breite */
+  height: 80%; /* Erhöhte Höhe */
+}
+.vfrc-chat--dialog {
+  width: 300px; /* Reduzierte Breite */
+  height: 80%; /* Erhöhte Höhe */
+}
 
 
 
