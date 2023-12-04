@@ -87,7 +87,7 @@
 }
 .vfrc-chat, .vfrc-chat--overlay {
   width: 330px ;
-  height: 760px !important;/* Erhöhte feste Höhe in Pixel */
+  height: 755px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 45px;
