@@ -85,25 +85,14 @@
 .vfrc-launcher img {
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
-.vfrc-chat {
+.vfrc-chat, .vfrc-chat--overlay {
   width: 320px ;
-  height: 840px ; /* Erhöhte feste Höhe in Pixel */
+  height: 800px ; /* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 12px;
   bottom: 5px;
   position: fixed;
   border: 1px solid transparent;
-}
-.vfrc-chat--overlay {
-  /* Stellen Sie sicher, dass die Overlay-Größe ebenfalls angepasst wird, falls erforderlich */
-  height: 900px ;
-  width: 350px ;
-}
-
-.vfrc-widget--chat {
-  height: 900px; /* Erhöhte Höhe */
-  width: 350px; /* Erhöhte Breite */
-  /* ... andere Eigenschaften ... */
 }
 
 
