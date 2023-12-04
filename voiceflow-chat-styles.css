@@ -61,19 +61,25 @@
 }
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(1.6); /* Grundgröße */
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.76); /* 60% größer als die Grundgröße */
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.6); /* Zurück zur Grundgröße */
   }
 }
 
 .vfrc-launcher {
+  transform: scale(1.6); /* Grundgröße um 60% erhöhen */
   animation: pulse 2s infinite;
 }
+
+.vfrc-launcher img {
+  transform: scale(1.6); /* Vergrößert nur das Bild um 60% */
+}
+
 
 
 /* Weitere spezifische Anpassungen können hier hinzugefügt werden */
