@@ -12,8 +12,11 @@
   color: #ffffff; /* Weiß */
   border-radius: 25px;
   border: 1px solid transparent;
-  height: 50px;
-  width: 70px
+  height: 45px;
+  width: 300px
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 /* CHAT MESSAGE BODY */
@@ -82,20 +85,13 @@
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
 .vfrc-chat, .vfrc-chat--overlay {
-   width: 320px !important;
-  height: 84vh;
-  border-radius: 25px;
-  right: 10px;
-  bottom: 5px;
-  border: 1px solid transparent; /* unchanged */
-}
-.vfrc-chat--dialog {
   width: 320px !important;
   height: 84vh;
   border-radius: 25px;
-  right: 10px;
+  right: 20px; /* Abstand zum rechten Rand auf 20px setzen */
   bottom: 5px;
-  border: 1px solid transparent; /* unchanged */
+  position: fixed; /* Stellt sicher, dass das Widget relativ zum Viewport positioniert ist */
+  border: 1px solid transparent;
 }
 
 
