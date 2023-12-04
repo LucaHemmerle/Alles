@@ -26,7 +26,7 @@
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #c5c7ca; /* hellgrau */
-  color: #3c393d; /* Dunkelgrau */
+  color: ##000000; /* Dunkelgrau */
 }
 
 /* USER RESPONSES */
