@@ -6,14 +6,18 @@
   color: #3c393d; /* Dunkelgrau */
 }
 .vfrc-widget--chat {
-  width: 350px; /* Erhöhte Breite */
-  height: 730px; /* Erhöhte Höhe */
-  overflow: hidden;
-  border-radius: var(--radii-2);
-  box-shadow: none; /* Entfernt den Schatten */
-  border: none; / /* ... andere Eigenschaften ... */
-  bottom: 40px;
-  position: fixed;
+  display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: var(--colors-white);
+    width: 330px;
+    height: 730px !important;
+    border-radius: 25px;
+    right: 2px;
+    bottom: 40px;
+    position: fixed;
+    border: 1px solid transparent;
+    /* ... andere Eigenschaften ... */
 }
 
 .vfrc-header {
