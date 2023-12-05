@@ -86,11 +86,11 @@
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
 .vfrc-chat, .vfrc-chat--overlay {
-  width: 330px ;
-  height: 755px !important;/* Erhöhte feste Höhe in Pixel */
+  width: 320px ;
+  height: 800px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
-  bottom: 45px;
+  bottom: 25px;
   position: fixed;
   border: 1px solid transparent;
 }
