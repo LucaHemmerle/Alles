@@ -7,8 +7,11 @@
 }
 .vfrc-widget--chat {
   width: 400px; /* Erhöhte Breite */
-  height: 800px; /* Erhöhte Höhe */
-  /* ... andere Eigenschaften ... */
+  height: 900px; /* Erhöhte Höhe */
+  overflow: hidden;
+  border-radius: var(--radii-2);
+  box-shadow: none; /* Entfernt den Schatten */
+  border: none; / /* ... andere Eigenschaften ... */
 }
 
 .vfrc-header {
@@ -100,8 +103,8 @@
   border: 1px solid transparent;
 }
 .vfrc-chat--overlay {
-  width: 240px ;
-  height: 650px !important;/* Erhöhte feste Höhe in Pixel */
+  width: 330px ;
+  height: 800px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 25px;
