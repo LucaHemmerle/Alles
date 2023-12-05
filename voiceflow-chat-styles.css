@@ -120,9 +120,9 @@
 @media (max-width: 768px) {
   .vfrc-launcher {
     position: fixed;
-    right: 20px;
-    bottom: 30px;
-    transform: scale(0.8); /* Verkleinert das Icon um 20% */
+    right: 10px;
+    bottom: 50px;
+    transform: scale(0.7); /* Verkleinert das Icon um 20% */
     animation: pulse 2s infinite; /* Behält die pulsierende Animation bei */
   }
 
