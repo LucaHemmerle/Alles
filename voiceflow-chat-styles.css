@@ -7,7 +7,7 @@
 }
 .vfrc-widget--chat {
   width: 350px; /* Erhöhte Breite */
-  height: 770px; /* Erhöhte Höhe */
+  height: 750px; /* Erhöhte Höhe */
   overflow: hidden;
   border-radius: var(--radii-2);
   box-shadow: none; /* Entfernt den Schatten */
@@ -96,19 +96,19 @@
 }
 .vfrc-chat {
   width: 330px ;
-  height: 750px !important;/* Erhöhte feste Höhe in Pixel */
+  height: 720px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
-  bottom: 25px;
+  bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
 }
 .vfrc-chat--overlay {
   width: 330px ;
-  height: 750px !important;/* Erhöhte feste Höhe in Pixel */
+  height: 720px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
-  bottom: 25px;
+  bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
 }
