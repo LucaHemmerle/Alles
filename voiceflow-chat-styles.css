@@ -130,6 +130,15 @@
     transform: scale(1); /* Setzt die Größe des Bildes zurück */
   }
 }
+@media (max-width: 768px) {
+  .vfrc-widget--chat, .vfrc-chat, .vfrc-chat--overlay {
+    right: 50%; /* Positioniert das Element in der Mitte des rechten Randes */
+    bottom: 50%; /* Positioniert das Element in der Mitte des unteren Randes */
+    transform: translate(-50%, 50%); /* Verschiebt das Element zurück, um es zentriert zu positionieren */
+    position: fixed;
+  }
+}
+
 
 
 
