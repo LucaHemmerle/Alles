@@ -7,7 +7,7 @@
 }
 .vfrc-widget--chat {
   width: 350px; /* Erhöhte Breite */
-  height: 780px; /* Erhöhte Höhe */
+  height: 770px; /* Erhöhte Höhe */
   overflow: hidden;
   border-radius: var(--radii-2);
   box-shadow: none; /* Entfernt den Schatten */
