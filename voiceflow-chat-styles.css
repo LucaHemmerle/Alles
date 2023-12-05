@@ -6,12 +6,13 @@
   color: #3c393d; /* Dunkelgrau */
 }
 .vfrc-widget--chat {
-  width: 400px; /* Erhöhte Breite */
-  height: 900px; /* Erhöhte Höhe */
+  width: 350px; /* Erhöhte Breite */
+  height: 780px; /* Erhöhte Höhe */
   overflow: hidden;
   border-radius: var(--radii-2);
   box-shadow: none; /* Entfernt den Schatten */
   border: none; / /* ... andere Eigenschaften ... */
+  bottom: 40px;
 }
 
 .vfrc-header {
@@ -94,8 +95,8 @@
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
 .vfrc-chat {
-  width: 240px ;
-  height: 650px !important;/* Erhöhte feste Höhe in Pixel */
+  width: 330px ;
+  height: 750px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 25px;
@@ -104,7 +105,7 @@
 }
 .vfrc-chat--overlay {
   width: 330px ;
-  height: 800px !important;/* Erhöhte feste Höhe in Pixel */
+  height: 750px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 25px;
