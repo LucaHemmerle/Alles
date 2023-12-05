@@ -5,6 +5,11 @@
   font-size: 16px;
   color: #3c393d; /* Dunkelgrau */
 }
+.vfrc-widget--chat {
+  width: 400px; /* Erhöhte Breite */
+  height: 800px; /* Erhöhte Höhe */
+  /* ... andere Eigenschaften ... */
+}
 
 .vfrc-header {
   background: #3c393d;
