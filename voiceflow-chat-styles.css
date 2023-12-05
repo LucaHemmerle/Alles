@@ -94,6 +94,7 @@
 .vfrc-launcher {
   transform: scale(1.1); /* Grundgröße um 60% erhöhen */
   animation: pulse 2s infinite;
+  bottom: 50px;
 }
 
 .vfrc-launcher img {
