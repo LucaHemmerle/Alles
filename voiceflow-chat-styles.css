@@ -11,10 +11,10 @@
     flex-direction: column;
     background-color: var(--colors-white);
     width: 330px;
-    height: 740px !important;
+    height: 730px !important;
     border-radius: 25px;
     right: 2px;
-    bottom: 40px;
+    bottom: 50px;
     position: fixed;
     border: 1px solid transparent;
     /* ... andere Eigenschaften ... */
