@@ -7,12 +7,13 @@
 }
 .vfrc-widget--chat {
   width: 350px; /* Erhöhte Breite */
-  height: 750px; /* Erhöhte Höhe */
+  height: 730px; /* Erhöhte Höhe */
   overflow: hidden;
   border-radius: var(--radii-2);
   box-shadow: none; /* Entfernt den Schatten */
   border: none; / /* ... andere Eigenschaften ... */
   bottom: 40px;
+  position: fixed;
 }
 
 .vfrc-header {
@@ -114,8 +115,8 @@
 }
 @media (max-width: 768px) {
   .vfrc-launcher {
-    transform: scale(0.5); /* Verkleinert das Icon um 33% */
-    bottom: 245px; /* Verschiebt das Icon um 100px höher */
+    transform: scale(0.1); /* Verkleinert das Icon um 33% */
+    bottom: 345px; /* Verschiebt das Icon um 100px höher */
   }
 }
 
