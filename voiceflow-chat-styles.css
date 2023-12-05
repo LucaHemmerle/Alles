@@ -119,9 +119,12 @@
 }
 @media (max-width: 768px) {
   .vfrc-launcher {
-    transform: scale(0.1); /* Verkleinert das Icon um 33% */
-    bottom: 345px; /* Verschiebt das Icon um 100px höher */
+    position: fixed; /* oder 'absolute' oder 'relative', je nach Bedarf */
+    transform: scale(0.67); /* Verkleinert das Icon um 33% */
+    bottom: 100px; /* Verschiebt das Icon um 100px höher */
   }
+}
+
 }
 
 
