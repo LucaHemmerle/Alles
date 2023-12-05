@@ -96,6 +96,7 @@
   animation: pulse 2s infinite;
   position: fixed;
   bottom: 50px;
+  right: 50px;
 }
 
 .vfrc-launcher img {
