@@ -45,7 +45,7 @@
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #c5c7ca; /* hellgrau */
-  color: ##000000; /* Dunkelgrau */
+  color: #000000; /* Dunkelgrau */
 }
 
 /* USER RESPONSES */
@@ -119,6 +119,19 @@
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
+}
+.vfrc-launcher-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
 }
 @media (max-width: 768px) {
   .vfrc-launcher {
