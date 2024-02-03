@@ -45,13 +45,13 @@
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #c5c7ca; /* hellgrau */
-  color: ##c5c7ca; /* Dunkelgrau */
+  color: ##000000; /* Dunkelgrau */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
   background-color: #f39206; /* Orange */
-  color: #f39206; /* Weiß */
+  color: #ffffff; /* Weiß */
 }
 
 /* FOOTER */
