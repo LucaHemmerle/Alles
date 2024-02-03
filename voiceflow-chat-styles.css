@@ -132,6 +132,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 14px;
+  z-index: 1000; /* Stellt sicher, dass die Badge über anderen Elementen liegt */
 }
 @media (max-width: 768px) {
   .vfrc-launcher {
