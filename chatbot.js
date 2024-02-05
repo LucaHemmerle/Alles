@@ -1,4 +1,3 @@
-<script type="text/javascript">
 (function(d, t) {
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
   v.onload = function() {
@@ -23,4 +22,3 @@ window.onload = function() {
     }, 1000);
   }
 };
-</script>
