@@ -1,28 +1,26 @@
-/* Voiceflow Chat Styles basierend auf Botpress-CSS */
-
 /* PAGE CONTENTS */
 .voiceflow-chat {
   font-size: 16px;
-  color: #3c393d; /* Dunkelgrau */
+  color: #212020; /* Dunkle Grau */
 }
+
 .vfrc-widget--chat {
   display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    background-color: var(--colors-white);
-    width: 330px;
-    height: 730px !important;
-    border-radius: 25px;
-    right: 2px;
-    bottom: 60px;
-    position: fixed;
-    border: 1px solid transparent;
-    /* ... andere Eigenschaften ... */
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #fcfcfc; /* Weiß */
+  width: 330px;
+  height: 730px !important;
+  border-radius: 25px;
+  right: 2px;
+  bottom: 60px;
+  position: fixed;
+  border: 1px solid #d9c382; /* Trüb Gold */
 }
 
 .vfrc-header {
-  background: #3c393d;
-  color: #ffffff;
+  background: #121212; /* Schwarz */
+  color: #fcfcfc; /* Weiß */
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
@@ -32,67 +30,56 @@
   margin-right: auto;
 }
 
-
-
 /* CHAT MESSAGE BODY */
 .vfrc-message {
-  background-color: #ffffff; /* Weiß */
-  color: #3c393d; /* Dunkelgrau */
+  background-color: #fcfcfc; /* Weiß */
+  color: #212020; /* Dunkle Grau */
   border-radius: 7.5px;
-  border: 1px solid transparent;
+  border: 1px solid #d0d0d0; /* Hellgrau */
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
-  background-color: #c5c7ca; /* hellgrau */
-  color: #000000; /* Dunkelgrau */
+  background-color: #4c4c4c; /* Dunkelgrau */
+  color: #fcfcfc; /* Weiß */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
-  background-color: #f39206; /* Orange */
-  color: 	#ffffff; /* Weiß */
+  background-color: #c6ac69; /* Trübes Gold */
+  color: #fcfcfc; /* Weiß */
 }
 
 /* FOOTER */
 .vf-footer {
-  background: #c5c7ca; /* Hellgrau */
-  color: #ffffff; /* Weiß */
+  background: #4c4c4c; /* Dunkelgrau */
+  color: #fcfcfc; /* Weiß */
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 
 /* INPUT FELD */
 .vfrc-input {
-  background-color: #ffffff; /* Weiß */
-  color: #3c393d; /* Dunkelgrau */
-  border: 1px solid #3c393d; /* Dunkelgraue Umrandung */
+  background-color: #fcfcfc; /* Weiß */
+  color: #212020; /* Dunkle Grau */
+  border: 1px solid #121212; /* Schwarz */
 }
 
 /* BUTTONS */
 .vfrc-button {
-  background-color: #f39206; /* Orange */
-  color: #ffffff; /* Weiß */
+  background-color: #d2ac4b; /* Hellgold */
+  color: #fcfcfc; /* Weiß */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #3c393d; /* Dunkelgrau beim Hover */
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1.4); /* Grundgröße */
-  }
-  50% {
-    transform: scale(1.6); /* 60% größer als die Grundgröße */
-  }
-  100% {
-    transform: scale(1.4); /* Zurück zur Grundgröße */
-  }
+  background-color: #212020; /* Dunkle Grau beim Hover */
 }
 
+/* Weitere Anpassungen basierend auf Animationen und Responsivität bleiben unverändert */
+
 .vfrc-launcher {
-  transform: scale(1.1); /* Grundgröße um 60% erhöhen */
+  transform: scale(1.1);
   animation: pulse 2s infinite;
   position: fixed;
   bottom: 40px;
@@ -100,38 +87,31 @@
 }
 
 .vfrc-launcher img {
-  transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
+  transform: scale(1.2);
 }
-.vfrc-chat {
-  width: 330px ;
-  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
+
+.vfrc-chat, .vfrc-chat--overlay {
+  width: 330px;
+  height: 680px !important;
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
 }
-.vfrc-chat--overlay {
-  width: 330px ;
-  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
-  border-radius: 25px;
-  right: 2px;
-  bottom: 40px;
-  position: fixed;
-  border: 1px solid transparent;
-}
+
 .vfrc-launcher-notification {
   position: absolute;
-  top: -10px; /* Positioniert die Blase über dem Chat-Button */
-  right: -10px; /* Positioniert die Blase rechts vom Chat-Button */
-  background-color: red; /* Rote Hintergrundfarbe */
-  color: white; /* Weiße Textfarbe */
-  border-radius: 50%; /* Runde Form */
-  width: 20px; /* Breite der Blase */
-  height: 20px; /* Höhe der Blase */
-  text-align: center; /* Zentriert den Text */
-  line-height: 20px; /* Vertikale Ausrichtung des Textes */
-  font-size: 12px; /* Schriftgröße */
+  top: -10px;
+  right: -10px;
+  background-color: #d9c382; /* Trüb Gold */
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px
   z-index: 1001; /* Stellt sicher, dass die Blase über anderen Elementen liegt */
 }
 
