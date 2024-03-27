@@ -67,17 +67,28 @@
 
 /* BUTTONS */
 .vfrc-button {
-  background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
+  background-color: #d2ac4b; /* Orange */
   color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
+  background-color: #212020; /* Dunkelgrau beim Hover */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.4); /* Grundgröße */
+  }
+  50% {
+    transform: scale(1.6); /* 60% größer als die Grundgröße */
+  }
+  100% {
+    transform: scale(1.4); /* Zurück zur Grundgröße */
+  }
 }
 
 .vfrc-launcher {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Grundgröße um 60% erhöhen */
   animation: pulse 2s infinite;
   position: fixed;
   bottom: 40px;
@@ -85,32 +96,39 @@
 }
 
 .vfrc-launcher img {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
-
-.vfrc-chat, .vfrc-chat--overlay {
-  width: 330px;
-  height: 680px !important;
+.vfrc-chat {
+  width: 330px ;
+  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
 }
-
+.vfrc-chat--overlay {
+  width: 330px ;
+  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
+  border-radius: 25px;
+  right: 2px;
+  bottom: 40px;
+  position: fixed;
+  border: 1px solid transparent;
+}
 .vfrc-launcher-notification {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: #d2ac4b; /* Angepasst von Rot zu #d2ac4b für Konsistenz */
-  color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  z-index: 1001;
+  top: -10px; /* Positioniert die Blase über dem Chat-Button */
+  right: -10px; /* Positioniert die Blase rechts vom Chat-Button */
+  background-color: #d2ac4b; /* Rote Hintergrundfarbe */
+  color: white; /* Weiße Textfarbe */
+  border-radius: 50%; /* Runde Form */
+  width: 20px; /* Breite der Blase */
+  height: 20px; /* Höhe der Blase */
+  text-align: center; /* Zentriert den Text */
+  line-height: 20px; /* Vertikale Ausrichtung des Textes */
+  font-size: 12px; /* Schriftgröße */
+  z-index: 1001; /* Stellt sicher, dass die Blase über anderen Elementen liegt */
 }
 
 @media (max-width: 768px) {
@@ -118,14 +136,18 @@
     position: fixed;
     right: 10px;
     bottom: 50px;
-    transform: scale(0.7);
-        animation: pulse 2s infinite; /* Behält die pulsierende Animation bei */
+    transform: scale(0.7); /* Verkleinert das Icon um 20% */
+    animation: pulse 2s infinite; /* Behält die pulsierende Animation bei */
   }
 
   .vfrc-launcher img {
     transform: scale(1); /* Setzt die Größe des Bildes zurück */
   }
+ 
 }
+
+
+
 
 }
 
