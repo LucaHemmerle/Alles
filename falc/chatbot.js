@@ -6,7 +6,7 @@
       url: 'https://general-runtime.voiceflow.com',
       versionID: 'production',
       assistant: {
-        stylesheet: 'https://www.estatebotics.de/falc.css'
+        stylesheet: 'https://www.estatebotics.de/falc/falc.css'
       }
     });
   };
