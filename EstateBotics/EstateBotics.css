@@ -1,26 +1,26 @@
 /* PAGE CONTENTS */
 .voiceflow-chat {
   font-size: 16px;
-  color: #212020; /* Dunkle Grau */
+  color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
 }
 
 .vfrc-widget--chat {
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  background-color: #fcfcfc; /* Weiß */
+  background-color: #ffffff; /* Weiß */
   width: 330px;
   height: 730px !important;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
   position: fixed;
-  border: 1px solid transparent; /* Geändert */
+  border: 1px solid transparent; 
 }
 
 .vfrc-header {
-  background: #121212; /* Schwarz */
-  color: #fcfcfc; /* Weiß */
+  background: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
+  color: #ffffff; /* Weiß */
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
@@ -32,48 +32,48 @@
 
 /* CHAT MESSAGE BODY */
 .vfrc-message {
-  background-color: #fcfcfc; /* Weiß */
-  color: #212020; /* Dunkle Grau */
+  background-color: #ffffff; /* Weiß */
+  color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
-  border: 1px solid transparent; /* Geändert */
+  border: 1px solid transparent;
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
-  background-color: #4c4c4c; /* Dunkelgrau */
-  color: #fcfcfc; /* Weiß */
+  background-color: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  color: #000000; /* Schwarz */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
-  background-color: #c6ac69; /* Trübes Gold */
-  color: #fcfcfc; /* Weiß */
+  background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
+  color: #ffffff; /* Weiß */
 }
 
 /* FOOTER */
 .vf-footer {
-  background: #4c4c4c; /* Dunkelgrau */
-  color: #fcfcfc; /* Weiß */
+  background: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  color: #ffffff; /* Weiß */
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 
 /* INPUT FELD */
 .vfrc-input {
-  background-color: #fcfcfc; /* Weiß */
-  color: #212020; /* Dunkle Grau */
-  border: 1px solid transparent; /* Geändert */
+  background-color: #ffffff; /* Weiß */
+  color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
+  border: 1px solid transparent; /* Angepasst von transparent zu #212020 für sichtbare Umrandung */
 }
 
 /* BUTTONS */
 .vfrc-button {
-  background-color: #d2ac4b; /* Hellgold */
-  color: #fcfcfc; /* Weiß */
+  background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
+  color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #212020; /* Dunkle Grau beim Hover */
+  background-color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
 }
 
 .vfrc-launcher {
@@ -85,45 +85,37 @@
 }
 
 .vfrc-launcher img {
-  transform:
- scale(1.2);
+  transform: scale(1.2);
 }
 
 .vfrc-chat, .vfrc-chat--overlay {
-width: 330px;
-height: 680px !important; /* Erhöhte feste Höhe in Pixel /
-border-radius: 25px;
-right: 2px;
-bottom: 40px;
-position: fixed;
-border: 1px solid transparent; / Angepasst an Falc-Stil */
+  width: 330px;
+  height: 680px !important;
+  border-radius: 25px;
+  right: 2px;
+  bottom: 40px;
+  position: fixed;
+  border: 1px solid transparent;
 }
 
 .vfrc-launcher-notification {
-position: absolute;
-top: -10px;
-right: -10px;
-background-color: #d9c382; /* Trüb Gold /
-color: white;
-border-radius: 50%;
-width: 20px;
-height: 20px;
-text-align: center;
-line-height: 20px;
-font-size: 12px;
-z-index: 1001; / Stellt sicher, dass die Blase über anderen Elementen liegt */
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #d2ac4b; /* Angepasst von Rot zu #d2ac4b für Konsistenz */
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  z-index: 1001;
 }
 
 @media (max-width: 768px) {
-.vfrc-launcher {
-position: fixed;
-right: 10px;
-bottom: 50px;
-transform: scale(0.7); /* Verkleinert das Icon um 20% /
-animation: pulse 2s infinite; / Behält die pulsierende Animation bei */
-}
-
-.vfrc-launcher img {
-transform: scale(1); /* Setzt die Größe des Bildes zurück */
-}
-}
+  .vfrc-launcher {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    transform: scale(0.7);
