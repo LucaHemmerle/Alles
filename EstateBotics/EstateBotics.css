@@ -10,10 +10,10 @@
   flex-direction: column;
   background-color: #ffffff; /* Weiß */
   width: 330px;
-  height: 630px !important;
+  height: 680px !important;
   border-radius: 25px;
   right: 2px;
-  bottom: 30px;
+  bottom: 40px;
   position: fixed;
   border: 1px solid transparent; 
 }
