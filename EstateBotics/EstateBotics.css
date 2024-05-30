@@ -29,12 +29,15 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.vfrc-chat--dialog {
+  width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
+}
 /* CHAT MESSAGE BODY */
 .vfrc-message {
   background-color: #ffffff; /* Weiß */
   color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
+  max-width: 100%;
   border: 1px solid transparent;
 }
 
