@@ -1,8 +1,3 @@
-.voiceflow-chat {
-  font-size: 16px;
-  color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
-}
-
 .vfrc-widget--chat {
   display: flex;
   flex-direction: column; /* Sicherstellen, dass die Elemente vertikal gestapelt werden */
@@ -23,7 +18,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
-  width: 675px !important; /* 270px * 2.5 */
+  width: 100%; /* Breite auf 100% des Eltern-Containers setzen */
   height: 60px; /* Feste Höhe für den Header */
   display: flex;
   align-items: center;
@@ -38,6 +33,7 @@
   height: calc(100% - 60px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
   padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
+  margin-top: 60px; /* Abstand zum Header */
 }
 
 /* CHAT MESSAGE BODY */
