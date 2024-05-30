@@ -1,3 +1,8 @@
+.voiceflow-chat {
+  font-size: 16px;
+  color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
+}
+
 .vfrc-widget--chat {
   display: flex;
   flex-direction: column; /* Sicherstellen, dass die Elemente vertikal gestapelt werden */
@@ -17,23 +22,49 @@
   color: #ffffff; /* Weiß */
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  border: 1px solid transparent;
+  border: 1px solid #000000; /* Schwarzer Rahmen */
   width: 100%; /* Breite auf 100% des Eltern-Containers setzen */
-  height: 60px; /* Feste Höhe für den Header */
+  height: 100px; /* Erhöhte Höhe für den Header, um Platz für die Assistenten-Info zu schaffen */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px; /* Innenabstand links und rechts */
   box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
   z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
+  margin-top: 20px; /* Abstand zum oberen Rand des Containers */
+}
+
+.vfrc-assistant-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vfrc-assistant-info .vfrc-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #d2ac4b; /* Beispielhafte Farbe für den Avatar-Hintergrund */
+  margin-bottom: 10px;
+}
+
+.vfrc-assistant-info--title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.vfrc-assistant-info--description {
+  font-size: 14px;
+  margin: 0;
 }
 
 .vfrc-chat--dialog {
   width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
-  height: calc(100% - 60px); /* Höhe anpassen, um Platz für den Header zu lassen */
+  height: calc(100% - 100px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
   padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
-  margin-top: 60px; /* Abstand zum Header */
 }
 
 /* CHAT MESSAGE BODY */
