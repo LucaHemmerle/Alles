@@ -8,8 +8,8 @@
   flex-direction: column; /* Sicherstellen, dass die Elemente vertikal gestapelt werden */
   overflow: hidden; /* Verhindert, dass Inhalte über den Container hinausgehen */
   background-color: #ffffff; /* Weiß */
-  width: 825px;
-  height: 1095px !important;
+  width: 825px; /* 330px * 2.5 */
+  height: 1095px !important; /* 730px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
@@ -23,7 +23,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
-  width: 100%; /* Breite auf 100% des Eltern-Containers setzen */
+  width: 675px !important; /* 270px * 2.5 */
   height: 60px; /* Feste Höhe für den Header */
   display: flex;
   align-items: center;
@@ -34,10 +34,10 @@
 }
 
 .vfrc-chat--dialog {
-  flex: 1; /* Nimmt den verbleibenden Platz ein */
   width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
+  height: calc(100% - 60px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
-  padding: 20px; /* Innenabstand für den Inhalt */
+  padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
 }
 
 /* CHAT MESSAGE BODY */
@@ -45,7 +45,7 @@
   background-color: #ffffff; /* Weiß */
   color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
-  max-width: 100%;
+  max-width: 100%; /* Verhindert, dass Nachrichten eine feste Breite haben */
   border: 1px solid transparent;
 }
 
@@ -112,23 +112,25 @@
 }
 
 .vfrc-chat {
-  width: 825px;
-  height: 1095px !important; /* Angepasste feste Höhe in Pixel */
+  width: 825px; /* 330px * 2.5 */
+  height: 1020px !important; /* 680px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
+  padding-top: 60px;
 }
 
 .vfrc-chat--overlay {
-  width: 825px;
-  height: 1095px !important; /* Angepasste feste Höhe in Pixel */
+  width: 825px; /* 330px * 2.5 */
+  height: 1020px !important; /* 680px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
+  padding-top: 60px;
 }
 
 .vfrc-launcher-notification {
