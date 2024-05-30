@@ -26,6 +26,7 @@
   justify-content: space-between;
   padding: 0 20px; /* Innenabstand links und rechts */
   box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
+  z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
 }
 .vfrc-chat--dialog {
   height: calc(100% - 60px); /* Höhe anpassen, um Platz für den Header zu lassen */
