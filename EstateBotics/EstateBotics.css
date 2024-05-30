@@ -39,7 +39,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 80px; /* Abstand nach oben hinzufügen */
+  margin-top: 140px; /* Abstand nach oben hinzufügen */
 }
 .vfrc-assistant-info .vfrc-avatar {
   width: 60px;
