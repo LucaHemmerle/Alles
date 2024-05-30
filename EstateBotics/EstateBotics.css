@@ -39,8 +39,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 40px; /* Abstand nach oben hinzufügen */
 }
-
 .vfrc-assistant-info .vfrc-avatar {
   width: 60px;
   height: 60px;
