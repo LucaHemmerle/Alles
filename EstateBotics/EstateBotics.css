@@ -19,19 +19,20 @@
 }
 
 .vfrc-header {
-  background: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
-  color: #ffffff; /* Weiß */
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border: 1px solid transparent;
-  width: 825px !important; /* Anpassung an die neue Breite des Chat-Fensters */
-  position: fixed; /* Position fixiert */
-  top: 0; /* Positioniert den Header am oberen Rand des Chat-Fensters */
-  z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
+  width: 100%; /* Breite auf 100% des Eltern-Containers setzen */
+  height: 60px; /* Feste Höhe für den Header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Innenabstand links und rechts */
+  box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
 }
 .vfrc-chat--dialog {
-  width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
+  height: calc(100% - 60px); /* Höhe anpassen, um Platz für den Header zu lassen */
+  overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
+  padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
 }
+
 /* CHAT MESSAGE BODY */
 .vfrc-message {
   background-color: #ffffff; /* Weiß */
