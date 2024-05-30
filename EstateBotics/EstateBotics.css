@@ -9,7 +9,7 @@
   overflow: hidden; /* Verhindert, dass Inhalte über den Container hinausgehen */
   background-color: #ffffff; /* Weiß */
   width: 825px; /* 330px * 2.5 */
-  height: 1250px !important; /* 730px * 1.5 */
+  height: 1095px !important; /* 730px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
@@ -140,7 +140,7 @@
 
 .vfrc-chat {
   width: 825px; /* 330px * 2.5 */
-  height: 1250px !important; /* 680px * 1.5 */
+  height: 1095px !important; /* 680px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
@@ -151,7 +151,7 @@
 
 .vfrc-chat--overlay {
   width: 825px; /* 330px * 2.5 */
-  height: 1250px !important; /* 680px * 1.5 */
+  height: 1095px !important; /* 680px * 1.5 */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
