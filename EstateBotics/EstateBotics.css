@@ -16,6 +16,7 @@
   position: fixed;
   border: 1px solid transparent; 
   box-sizing: border-box;
+  z-index: 1000; 
 }
 
 .vfrc-header {
@@ -66,7 +67,7 @@
   height: calc(100% - 100px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
   padding-top: 0px; /* Optional: Innenabstand oben für Abstand zum Header */
-  margin-top: 20px; 
+  margin-top: 0px; 
   box-sizing: border-box;
 }
 
@@ -200,3 +201,8 @@
 }
 
 /* Weitere spezifische Anpassungen können hier hinzugefügt werden */
+
+* {
+  outline: 1px solid red; /* Fügt jedem Element eine rote Umrandung hinzu */
+}
+
