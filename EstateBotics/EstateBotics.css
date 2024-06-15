@@ -83,14 +83,16 @@
 .vfrc-system-response .vfrc-message {
   background-color: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
   color: #000000; /* Schwarz */
+  max-width: calc(100% - 40px); /* Verhindert, dass die Blasen zu breit werden */
+  margin: 10px; /* Fügt etwas Abstand um die Nachrichten hinzu */
 }
 
 /* USER RESPONSES */
-.vfrc-user-response .vfrc-message {
   background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #ffffff; /* Weiß */
+  max-width: calc(100% - 40px); /* Verhindert, dass die Blasen zu breit werden */
+  margin: 10px; /* Fügt etwas Abstand um die Nachrichten hinzu */
 }
-
 /* FOOTER */
 .vf-footer {
   background: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
