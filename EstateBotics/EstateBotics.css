@@ -6,7 +6,7 @@
 .vfrc-widget--chat {
   display: flex;
   flex-direction: column; /* Sicherstellen, dass die Elemente vertikal gestapelt werden */
-  overflow: hidden; /* Verhindert, dass Inhalte über den Container hinausgehen */
+  overflow: auto; /* Verhindert, dass Inhalte über den Container hinausgehen */
   background-color: #ffffff; /* Weiß */
   width: 825px; /* 330px * 2.5 */
   height: 1095px !important; /* 730px * 1.5 */
@@ -67,7 +67,7 @@
   height: calc(100% - 100px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
   padding-top: 0px; /* Optional: Innenabstand oben für Abstand zum Header */
-  margin-top: 0px; 
+  margin-top: 20px; 
   box-sizing: border-box;
 }
 
