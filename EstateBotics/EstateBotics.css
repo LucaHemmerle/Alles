@@ -32,7 +32,7 @@
   padding: 0 20px; /* Innenabstand links und rechts */
   box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
   z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
-  margin-top: 20px; /* Abstand zum oberen Rand des Containers */
+  margin-top: 0px; /* Abstand zum oberen Rand des Containers */
 }
 
 .vfrc-assistant-info {
@@ -65,7 +65,8 @@
   width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
   height: calc(100% - 100px); /* Höhe anpassen, um Platz für den Header zu lassen */
   overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
-  padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
+  padding-top: 0px; /* Optional: Innenabstand oben für Abstand zum Header */
+  margin-top: 20px; 
   box-sizing: border-box;
 }
 
