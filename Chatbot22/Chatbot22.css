@@ -46,7 +46,7 @@
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
-  background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
+  background-color: #003145; /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #ffffff; /* Weiß */
 }
 
@@ -67,7 +67,7 @@
 
 /* BUTTONS */
 .vfrc-button {
-  background-color: #d2ac4b; /* Orange */
+  background-color: #003145; /* Orange */
   color: #ffffff; /* Weiß */
   border-radius: 25px;
 }
@@ -120,7 +120,7 @@
   position: absolute;
   top: -10px; /* Positioniert die Blase über dem Chat-Button */
   right: -10px; /* Positioniert die Blase rechts vom Chat-Button */
-  background-color: #d2ac4b; /* Rote Hintergrundfarbe */
+  background-color: #003145; /* Rote Hintergrundfarbe */
   color: white; /* Weiße Textfarbe */
   border-radius: 50%; /* Runde Form */
   width: 20px; /* Breite der Blase */
