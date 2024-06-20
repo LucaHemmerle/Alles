@@ -7,7 +7,12 @@
       versionID: 'production',
       assistant: {
         stylesheet: 'https://www.estatebotics.de/Chatbot22/Chatbot22.css'
-      }
+      },
+      render: {
+        mode: 'embedded',
+        target: document.getElementById('chat-container') // Hier wird das Ziel-Element angegeben
+      },
+      autostart: false
     });
   };
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
