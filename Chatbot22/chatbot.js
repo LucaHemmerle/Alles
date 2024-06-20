@@ -23,6 +23,13 @@
         target: document.getElementById('chat-container')
       },
       autostart: true // Setze autostart auf true
+    }).then(() => {
+      // Verzögere das Öffnen des Chat-Fensters um 4 Sekunden
+      setTimeout(function() {
+        if (window.innerWidth >= 1024) {
+          window.voiceflow.chat.open();
+        }
+      }, 4000); // Wartezeit von 4 Sekunden
     }).catch(error => {
       console.error('Voiceflow Chatbot failed to load:', error);
     });
@@ -31,11 +38,3 @@
   v.type = "text/javascript";
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
-
-window.onload = function() {
-  if (window.innerWidth >= 1024) {
-    setTimeout(function() {
-      window.voiceflow.chat.open();
-    }, 2000); // Wartezeit von 2 Sekunden
-  }
-};
