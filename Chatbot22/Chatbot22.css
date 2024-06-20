@@ -5,7 +5,7 @@
 }
 .vfrc-widget--chat.c-fikloo {
   width: 450px !important;
-  height: 950px !important;
+  height: 900px !important;
   max-height: none !important;  /* Überschreibt die max-height von 800px */
 }
 
