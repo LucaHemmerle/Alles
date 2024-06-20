@@ -9,8 +9,8 @@
   overflow: hidden;
   flex-direction: column;
   background-color: #ffffff; /* Weiß */
-  width: 330px;
-  height: 730px !important;
+  width: 450px;
+  height: 830px !important;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
@@ -25,7 +25,7 @@
   border-top-right-radius: 25px;
   border: 1px solid transparent;
   margin-top: 10px;
-  width: 270px !important;
+  width: 430px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -105,8 +105,8 @@
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
 .vfrc-chat {
-  width: 330px ;
-  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
+  width: 450px ;
+  height: 850px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
@@ -114,8 +114,8 @@
   border: 1px solid transparent;
 }
 .vfrc-chat--overlay {
-  width: 330px ;
-  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
+  width: 450px ;
+  height: 850px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
