@@ -11,6 +11,8 @@
   background-color: #ffffff; /* Weiß */
   width: 450px;
   height: 850px !important;
+  display: flex;
+  flex-direction: column;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
@@ -27,6 +29,7 @@
   margin-top: 10px;
   width: 430px !important;
   height: 60px; /* Neue Höhe für den Header */
+  flex-shrink: 0; /* Verhindert das Schrumpfen des Headers */
   margin-left: auto;
   margin-right: auto;
 }
@@ -108,6 +111,7 @@
 .vfrc-chat {
   width: 450px ;
   height: 850px !important;/* Erhöhte feste Höhe in Pixel */
+  flex-grow: 1; /* Lässt den Chat den verfügbaren Platz ausfüllen *
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
@@ -116,7 +120,7 @@
 }
 .vfrc-chat--overlay {
   width: 450px ;
-  height: 850px !important;/* Erhöhte feste Höhe in Pixel */
+  height: calc(850px - 60px) !important; /* Höhe des Chats um die Höhe des Headers verringern */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
