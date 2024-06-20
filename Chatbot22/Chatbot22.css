@@ -5,7 +5,7 @@
 }
 .vfrc-widget--chat.c-fikloo {
   width: 450px !important;
-  height: 900px !important;
+  height: 890px !important;
   max-height: none !important;  /* Überschreibt die max-height von 800px */
 }
 
@@ -34,7 +34,7 @@
   border-top-right-radius: 25px;
   border: 1px solid transparent;
   margin-top: 10px;
-  width: 400px !important;
+  width: 390px !important;
   height: 60px; /* Neue Höhe für den Header */
   flex-shrink: 0; /* Verhindert das Schrumpfen des Headers */
   margin-left: auto;
