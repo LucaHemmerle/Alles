@@ -174,16 +174,16 @@
 
   .vfrc-chat {
     width: 100% !important;
-    height: calc(80% - 60px) !important; /* Höhe des Chats um die Höhe des Headers verringern */
+    height: calc(80% - 60px) !important;
   }
 
   .vfrc-chat--overlay {
     width: 100% !important;
     height: calc(80% - 60px) !important;
   }
-  
+
   .vfrc-launcher img {
-    transform: scale(1) !important; /* Setzt die Größe des Bildes zurück */
+    transform: scale(1) !important;
   }
 }
 
