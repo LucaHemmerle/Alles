@@ -150,19 +150,41 @@
 }
 
 @media (max-width: 768px) {
-  .vfrc-launcher {
-    position: fixed;
-    right: 10px;
-    bottom: 50px;
-    transform: scale(0.7); /* Verkleinert das Icon um 20% */
-    animation: pulse 2s infinite; /* Behält die pulsierende Animation bei */
-  }
-
   .vfrc-launcher img {
     transform: scale(1); /* Setzt die Größe des Bildes zurück */
   }
- 
+
+  .vfrc-widget--chat {
+    width: 80% !important;
+    height: 80% !important;
+    max-height: 80% !important;
+    position: fixed !important;
+    top: 10%;
+    left: 10%;
+    right: auto;
+    bottom: auto;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vfrc-header {
+    width: 100% !important;
+    height: 60px !important;
+  }
+
+  .vfrc-chat {
+    width: 100% !important;
+    height: calc(80% - 60px) !important; /* Höhe des Chats um die Höhe des Headers verringern */
+  }
+
+  .vfrc-chat--overlay {
+    width: 100% !important;
+    height: calc(80% - 60px) !important;
+  }
 }
+
 
 
 
