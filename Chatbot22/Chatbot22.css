@@ -3,6 +3,12 @@
   font-size: 16px;
   color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
 }
+#chat-container {
+  width: 450px;
+  height: 850px;
+  position: relative;
+  margin: auto;
+}
 
 .vfrc-widget--chat {
   display: flex;
