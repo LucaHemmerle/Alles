@@ -10,7 +10,7 @@
   flex-direction: column;
   background-color: #ffffff; /* Weiß */
   width: 450px;
-  height: 830px !important;
+  height: 850px !important;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
@@ -26,6 +26,7 @@
   border: 1px solid transparent;
   margin-top: 10px;
   width: 430px !important;
+  height: 60px; /* Neue Höhe für den Header */
   margin-left: auto;
   margin-right: auto;
 }
