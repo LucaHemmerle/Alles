@@ -149,24 +149,22 @@
   z-index: 1001; /* Stellt sicher, dass die Blase über anderen Elementen liegt */
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .vfrc-launcher img {
-    transform: scale(1); /* Setzt die Größe des Bildes zurück */
-  }
-
   .vfrc-widget--chat {
     width: 80% !important;
     height: 80% !important;
     max-height: 80% !important;
     position: fixed !important;
-    top: 10%;
-    left: 10%;
-    right: auto;
-    bottom: auto;
+    top: 10% !important;
+    left: 10% !important;
+    right: auto !important;
+    bottom: auto !important;
     border-radius: 25px;
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff !important;
   }
 
   .vfrc-header {
@@ -182,6 +180,10 @@
   .vfrc-chat--overlay {
     width: 100% !important;
     height: calc(80% - 60px) !important;
+  }
+  
+  .vfrc-launcher img {
+    transform: scale(1) !important; /* Setzt die Größe des Bildes zurück */
   }
 }
 
