@@ -33,7 +33,7 @@
   border-top-right-radius: 25px;
   border: 1px solid transparent;
   margin-top: 10px;
-  width: 430px !important;
+  width: 400px !important;
   height: 60px; /* Neue Höhe für den Header */
   flex-shrink: 0; /* Verhindert das Schrumpfen des Headers */
   margin-left: auto;
