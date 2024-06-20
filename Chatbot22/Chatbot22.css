@@ -3,12 +3,12 @@
   font-size: 16px;
   color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
 }
-#chat-container {
-  width: 450px;
-  height: 850px;
-  position: relative;
-  margin: auto;
+.vfrc-widget--chat.c-fikloo {
+  width: 450px !important;
+  height: 850px !important;
+  max-height: none !important;  /* Überschreibt die max-height von 800px */
 }
+
 
 .vfrc-widget--chat {
   display: flex;
@@ -17,6 +17,7 @@
   background-color: #ffffff; /* Weiß */
   width: 450px;
   height: 850px !important;
+  max-height: none !important;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
