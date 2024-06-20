@@ -36,18 +36,24 @@
   color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
   border: 1px solid transparent;
+  padding: 8px; /* Reduzierte Innenabstände */
+  line-height: 1.2; /* Kleinere Zeilenhöhe */
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
   color: #000000; /* Schwarz */
+  padding: 8px; /* Reduzierte Innenabstände */
+  line-height: 1.2; /* Kleinere Zeilenhöhe */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
   background-color: #003145; /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #ffffff; /* Weiß */
+  padding: 8px; /* Reduzierte Innenabstände */
+  line-height: 1.2; /* Kleinere Zeilenhöhe */
 }
 
 /* FOOTER */
