@@ -5,7 +5,7 @@
 }
 .vfrc-widget--chat.c-fikloo {
   width: 450px !important;
-  height: 850px !important;
+  height: 950px !important;
   max-height: none !important;  /* Überschreibt die max-height von 800px */
 }
 
@@ -16,7 +16,7 @@
   flex-direction: column;
   background-color: #ffffff; /* Weiß */
   width: 450px;
-  height: 850px !important;
+  height: 950px !important;
   max-height: none !important;
   display: flex;
   flex-direction: column;
