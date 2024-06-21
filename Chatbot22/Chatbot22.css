@@ -173,7 +173,7 @@
   }
 
   .vfrc-header {
-    width: 100% !important;
+    width: 90% !important;
     height: 60px !important;
     flex-shrink: 0;
   }
@@ -193,6 +193,11 @@
 
   .vfrc-launcher img {
     transform: scale(1) !important;
+  }
+
+  /* Hide Cancel Button */
+  .c-bXTvXv-igaDqE-type-subtle {
+    display: none !important;
   }
 }
 
