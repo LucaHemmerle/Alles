@@ -166,6 +166,12 @@
     background-color: #ffffff !important;
   }
 
+  .vfrc-widget--chat.c-fikloo {
+    width: 90vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
+  }
+
   .vfrc-header {
     width: 100% !important;
     height: 60px !important;
@@ -189,7 +195,6 @@
     transform: scale(1) !important;
   }
 }
-
 
 
 
