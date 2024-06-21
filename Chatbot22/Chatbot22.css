@@ -18,14 +18,13 @@
   width: 450px;
   height: 850px !important;
   max-height: none !important;
-  display: flex;
-  flex-direction: column;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
   position: fixed;
   border: 1px solid transparent; 
 }
+
 
 .vfrc-header {
   background: #55606e; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
