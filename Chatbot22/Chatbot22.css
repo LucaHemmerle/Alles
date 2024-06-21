@@ -173,9 +173,11 @@
   }
 
   .vfrc-header {
-    width: 90% !important;
+    width: 80% !important;
     height: 60px !important;
     flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .vfrc-chat {
