@@ -151,12 +151,12 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .vfrc-widget--chat {
-    width: 90% !important;
-    height: 90% !important;
-    max-height: 90% !important;
+    width: 90vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
     position: fixed !important;
-    top: 5% !important;
-    left: 5% !important;
+    top: 5vh !important;
+    left: 5vw !important;
     right: auto !important;
     bottom: auto !important;
     border-radius: 25px;
@@ -164,7 +164,6 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff !important;
-    overflow: hidden;
   }
 
   .vfrc-header {
@@ -175,14 +174,14 @@
 
   .vfrc-chat {
     width: 100% !important;
-    height: calc(100% - 60px) !important;
+    height: calc(90vh - 60px) !important;
     flex-grow: 1;
     overflow-y: auto;
   }
 
   .vfrc-chat--overlay {
     width: 100% !important;
-    height: calc(100% - 60px) !important;
+    height: calc(90vh - 60px) !important;
     flex-grow: 1;
   }
 
