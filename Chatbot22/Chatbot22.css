@@ -243,8 +243,14 @@
   .c-bXTvXv-igaDqE-type-subtle {
     display: none !important;
   }
+  .vfrc-prompt {
+    width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .vfrc-footer {
-    width: 85% !important;  /* Anpassung */
+    width: 85% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
