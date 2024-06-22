@@ -239,6 +239,10 @@
     height: calc(100% - 60px) !important;
     flex-grow: 1;
   }
+  /* Hide Cancel Button */
+  .c-bXTvXv-igaDqE-type-subtle {
+    display: none !important;
+  }
 }
 
 
