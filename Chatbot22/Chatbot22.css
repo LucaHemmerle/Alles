@@ -203,61 +203,8 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .vfrc-widget--chat {
-    width: 80vw !important;
-    height: 80vh !important;
-    max-height: 80vh !important;
-    position: fixed !important;
-    top: 10vh !important;
-    left: 10vw !important;
-    right: auto !important;
-    bottom: auto !important;
-    border-radius: 25px;
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff !important;
-  }
-
-  .vfrc-widget--chat.c-fikloo {
-    width: 80vw !important;
-    height: 80vh !important;
-    max-height: 80vh !important;
-  }
-
-  .vfrc-header {
-    width: 85% !important;
-    height: 60px !important;
-    flex-shrink: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .vfrc-chat {
-    width: 100% !important;
-    height: calc(80vh - 60px) !important;
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-
-  .vfrc-chat--overlay {
-    width: 100% !important;
-    height: calc(80vh - 60px) !important;
-    flex-grow: 1;
-  }
-
-  .vfrc-launcher img {
-    transform: scale(1) !important;
-  }
-
-  /* Cancel Button ausblenden */
-  .c-bXTvXv-igaDqE-type-subtle {
-    display: none !important;
-  }
-}
 /* Responsive Design for Different Screen Sizes */
-@media (max-width: 1920px) and (min-width: 1025px) {
+@media (min-width: 1920px), (min-width: 1024px) and (max-device-width: 1920px) {
   .vfrc-widget--chat {
     width: 450px !important;
     height: 850px !important;
@@ -327,7 +274,6 @@
     display: none !important;
   }
 }
-
 
 }
 
