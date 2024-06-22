@@ -203,12 +203,18 @@
   }
 }
 
-/* Responsive Design for Different Screen Sizes */
 @media (min-width: 1920px), (min-width: 1024px) and (max-device-width: 1920px) {
-  .vfrc-widget--chat,
+  .vfrc-widget--chat {
+    width: 32% !important;
+    height: 80% !important;
+    max-height: none !important;
+    right: 1% !important;
+    bottom: 5% !important;
+  }
+
   .vfrc-widget--chat.c-fikloo {
-    width: 25% !important;
-    height: 100% !important;
+    width: 32% !important;
+    height: 82% !important;
     max-height: none !important;
     right: 1% !important;
     bottom: 5% !important;
