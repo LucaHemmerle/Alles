@@ -205,16 +205,17 @@
 
 /* Responsive Design for Different Screen Sizes */
 @media (min-width: 1920px), (min-width: 1024px) and (max-device-width: 1920px) {
-  .vfrc-widget--chat {
-    width: 450px !important;
-    height: 850px !important;
+  .vfrc-widget--chat,
+  .vfrc-widget--chat.c-fikloo {
+    width: 40% !important;
+    height: 80% !important;
     max-height: none !important;
-    right: 2px !important;
-    bottom: 60px !important;
+    right: 1% !important;
+    bottom: 5% !important;
   }
 
   .vfrc-header {
-    width: 390px !important;
+    width: 85% !important;
     height: 60px !important;
     margin-left: auto !important;
     margin-right: auto !important;
