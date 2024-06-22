@@ -229,14 +229,14 @@
 
   .vfrc-chat {
     width: 100% !important;
-    height: calc(80% - 60px) !important;
+    height: calc(100% - 60px) !important;
     flex-grow: 1;
     overflow-y: auto;
   }
 
   .vfrc-chat--overlay {
     width: 100% !important;
-    height: calc(80% - 60px) !important;
+    height: calc(100% - 60px) !important;
     flex-grow: 1;
   }
 }
