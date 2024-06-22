@@ -256,6 +256,15 @@
     display: none !important;
   }
 }
+@media (max-width: 1024px) {
+
+
+  .vfrc-widget--chat.c-fikloo {
+    width: 80vw !important;
+    height: 80vh !important;
+    max-height: 80vh !important;
+  }
+  }
 
 
 }
