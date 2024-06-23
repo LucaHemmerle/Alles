@@ -222,21 +222,21 @@
 
   .vfrc-header {
     width: 85% !important;
-    height: 60px !important;
+    height: 50px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
   .vfrc-chat {
     width: 100% !important;
-    height: calc(100% - 60px) !important;
+    height: calc(100% - 50px) !important;
     flex-grow: 1;
     overflow-y: auto;
   }
 
   .vfrc-chat--overlay {
     width: 100% !important;
-    height: calc(100% - 60px) !important;
+    height: calc(100% - 50px) !important;
     flex-grow: 1;
   }
   /* Hide Cancel Button */
