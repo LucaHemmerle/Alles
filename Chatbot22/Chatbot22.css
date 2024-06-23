@@ -206,7 +206,7 @@
 @media (min-width: 1920px), (min-width: 1024px) and (max-device-width: 1920px) {
   .vfrc-widget--chat {
     width: 32% !important;
-    height: 90% !important;
+    height: 94% !important;
     max-height: none !important;
     right: 1% !important;
     bottom: 2% !important;
@@ -214,7 +214,7 @@
 
   .vfrc-widget--chat.c-fikloo {
     width: 32% !important;
-    height: 92% !important;
+    height: 96% !important;
     max-height: none !important;
     right: 1% !important;
     bottom: 2% !important;
