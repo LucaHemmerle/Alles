@@ -1,3 +1,4 @@
+/* PAGE CONTENTS */
 .voiceflow-chat {
   font-size: 16px;
   color: #212020; /* Angepasst von Dunkelgrau #3c393d zu #212020 */
@@ -5,17 +6,16 @@
 
 .vfrc-widget--chat {
   display: flex;
-  flex-direction: column; /* Sicherstellen, dass die Elemente vertikal gestapelt werden */
-  overflow: hidden; /* Verhindert, dass Inhalte über den Container hinausgehen */
+  overflow: hidden;
+  flex-direction: column;
   background-color: #ffffff; /* Weiß */
-  width: 825px; /* 330px * 2.5 */
-  height: 1095px !important; /* 730px * 1.5 */
+  width: 330px;
+  height: 730px !important;
   border-radius: 25px;
   right: 2px;
   bottom: 60px;
   position: fixed;
   border: 1px solid transparent; 
-  box-sizing: border-box;
 }
 
 .vfrc-header {
@@ -23,50 +23,11 @@
   color: #ffffff; /* Weiß */
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  border: 1px solid #000000; /* Schwarzer Rahmen */
-  width: 100%; /* Breite auf 100% des Eltern-Containers setzen */
-  height: 100px; /* Erhöhte Höhe für den Header, um Platz für die Assistenten-Info zu schaffen */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px; /* Innenabstand links und rechts */
-  box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
-  z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
-  margin-top: 20px; /* Abstand zum oberen Rand des Containers */
-}
-
-.vfrc-assistant-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 160px; /* Abstand nach oben hinzufügen */
-}
-.vfrc-assistant-info .vfrc-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #d2ac4b; /* Beispielhafte Farbe für den Avatar-Hintergrund */
-  margin-bottom: 10px;
-}
-
-.vfrc-assistant-info--title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.vfrc-assistant-info--description {
-  font-size: 14px;
-  margin: 0;
-}
-
-.vfrc-chat--dialog {
-  width: 100%; /* Stellt sicher, dass der Inhalt die gesamte Breite des Chat-Fensters nutzt */
-  height: calc(100% - 100px); /* Höhe anpassen, um Platz für den Header zu lassen */
-  overflow-y: auto; /* Scrollen ermöglichen, wenn der Inhalt zu groß ist */
-  padding-top: 20px; /* Optional: Innenabstand oben für Abstand zum Header */
-  box-sizing: border-box;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  width: 270px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* CHAT MESSAGE BODY */
@@ -74,27 +35,19 @@
   background-color: #ffffff; /* Weiß */
   color: #212020; /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
-  max-width: 100%; /* Verhindert, dass Nachrichten eine feste Breite haben */
   border: 1px solid transparent;
-  width: auto; /* Setzt die Breite auf automatisch */
-  max-width: calc(100% - 40px); /* Verhindert, dass die Blasen zu breit werden */
-  margin: 10px; /* Fügt etwas Abstand um die Nachrichten hinzu */
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #d0d0d0; /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
   color: #000000; /* Schwarz */
-  max-width: calc(100% - 40px); /* Verhindert, dass die Blasen zu breit werden */
-  margin: 10px; /* Fügt etwas Abstand um die Nachrichten hinzu */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
   background-color: #d2ac4b; /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #ffffff; /* Weiß */
-  max-width: calc(100% - 40px); /* Verhindert, dass die Blasen zu breit werden */
-  margin: 10px; /* Fügt etwas Abstand um die Nachrichten hinzu */
 }
 
 /* FOOTER */
@@ -122,7 +75,6 @@
 .vfrc-button:hover {
   background-color: #212020; /* Dunkelgrau beim Hover */
 }
-
 @keyframes pulse {
   0% {
     transform: scale(1.4); /* Grundgröße */
@@ -146,29 +98,24 @@
 .vfrc-launcher img {
   transform: scale(1.2); /* Vergrößert nur das Bild um 60% */
 }
-
 .vfrc-chat {
-  width: 825px; /* 330px * 2.5 */
-  height: 1095px !important; /* 680px * 1.5 */
+  width: 330px ;
+  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
-  padding-top: 60px;
 }
-
 .vfrc-chat--overlay {
-  width: 825px; /* 330px * 2.5 */
-  height: 1095px !important; /* 680px * 1.5 */
+  width: 330px ;
+  height: 680px !important;/* Erhöhte feste Höhe in Pixel */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
   position: fixed;
   border: 1px solid transparent;
-  padding-top: 60px;
 }
-
 .vfrc-launcher-notification {
   position: absolute;
   top: -10px; /* Positioniert die Blase über dem Chat-Button */
@@ -196,6 +143,15 @@
   .vfrc-launcher img {
     transform: scale(1); /* Setzt die Größe des Bildes zurück */
   }
+ 
 }
+
+
+
+
+}
+
+
+
 
 /* Weitere spezifische Anpassungen können hier hinzugefügt werden */
