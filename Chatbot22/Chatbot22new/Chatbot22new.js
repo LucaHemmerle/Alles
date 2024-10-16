@@ -6,7 +6,7 @@
       url: 'https://general-runtime.voiceflow.com',
       versionID: 'production',
       assistant: {
-        stylesheet: 'https://www.estatebotics.de/Chatbot22/Chatbot22old/Chatbot22old.css'
+        stylesheet: 'https://www.estatebotics.de/Chatbot22/Chatbot22old/Chatbot22.css'
       }
     });
   };
