@@ -3,11 +3,11 @@
     s = d.getElementsByTagName(t)[0];
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "66fa98dc06930ea146f91983" },
+      verify: { projectID: "6670a21f3c0374134484b65a" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       assistant: {
-        stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
+        stylesheet: "./Chatbot22.css",
       },
     });
   };
@@ -20,7 +20,7 @@ var shadowRoot,
   intervalId,
   fontSize = 15;
 
-window.onload = function () {
+window.addEventListener('load', function () {
   if (window.innerWidth >= 1024) {
     setTimeout(function () {
       window.voiceflow.chat.open();
@@ -50,7 +50,7 @@ window.onload = function () {
       shadowRoot = element.shadowRoot;
     }
   });
-};
+});
 
 const convertTo24Hour = (timeString) => {
   let [time, modifier] = timeString.split(" ");
