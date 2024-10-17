@@ -7,7 +7,7 @@
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       assistant: {
-        stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22old/Chatbot22.css",
+        stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
       },
     });
   };
@@ -17,19 +17,24 @@
 })(document, "script");
 
 var shadowRoot,
-  intervalId,
+  fontButtonIntervalID,
+  shadowRootIntervalID,
   fontSize = 15;
 
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   if (window.innerWidth >= 1024) {
     setTimeout(function () {
       window.voiceflow.chat.open();
     }, 2000);
   }
 
-  intervalId = setInterval(function () {
+  shadowRootIntervalID = this.setInterval(function () {
+    searchShadowRoot();
+  }, 100);
+
+  fontButtonIntervalID = setInterval(function () {
     addFontSizeButtonToShadowDom();
-  }, 1000);
+  }, 100);
 
   var config = {
     attributes: true,
@@ -39,17 +44,21 @@ window.addEventListener('load', function () {
 
   var observer = new MutationObserver(callback);
 
-  document.querySelectorAll("*").forEach((element) => {
-    // No shadow root? Continue.
-    if (!element.shadowRoot) {
-      return;
-    }
+  const searchShadowRoot = () => {
+    console.log("Find Shadow Root");
+    document.querySelectorAll("*").forEach((element) => {
+      // No shadow root? Continue.
+      if (!element.shadowRoot) {
+        return;
+      }
 
-    if (element.id === "voiceflow-chat") {
-      observer.observe(element.shadowRoot, config);
-      shadowRoot = element.shadowRoot;
-    }
-  });
+      if (element.id === "voiceflow-chat") {
+        observer.observe(element.shadowRoot, config);
+        shadowRoot = element.shadowRoot;
+        clearInterval(shadowRootIntervalID);
+      }
+    });
+  };
 });
 
 const convertTo24Hour = (timeString) => {
@@ -74,7 +83,7 @@ var callback = function (mutationsList) {
   }
 };
 
-var modifyShadowDomTimestamps = () => {
+const modifyShadowDomTimestamps = () => {
   if (shadowRoot) {
     const timestamps = shadowRoot.querySelectorAll(".vfrc-timestamp");
 
@@ -92,22 +101,22 @@ var modifyShadowDomTimestamps = () => {
 };
 
 const addFontSizeButtonToShadowDom = () => {
-  console.log("Hello");
+  console.log("Add Font Size Button");
   if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
     // Create the button element
     const fontSizeButton = document.createElement("button");
     fontSizeButton.id = "btn-font-increase";
-    fontSizeButton.textContent = "+";
+    fontSizeButton.textContent = "Increase Font Size";
 
     // Append the button to the shadow DOM, within the chatbot's container
-    const chatContainer = shadowRoot.querySelector(".vfrc-chat");
+    const chatContainer = shadowRoot.querySelector(".vfrc-header");
     if (chatContainer) {
-      chatContainer.appendChild(fontSizeButton);
+      chatContainer.insertAdjacentElement("afterend", fontSizeButton)
 
       // Add event listener to increase font size when clicked
       fontSizeButton.addEventListener("click", increaseFontSizeInShadowDom);
 
-      clearInterval(intervalId);
+      clearInterval(fontButtonIntervalID);
     }
   }
 };
