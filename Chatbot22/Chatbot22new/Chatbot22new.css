@@ -1,4 +1,3 @@
-
 /* PAGE CONTENTS */
 .voiceflow-chat {
   font-size: 16px;
@@ -39,7 +38,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
-  margin-top: 10px;
+  /* margin-top: 5px; */
   width: 390px !important;
   height: 60px;
   /* Neue Höhe für den Header */
@@ -202,12 +201,13 @@
   /* Stellt sicher, dass die Blase über anderen Elementen liegt */
 }
 
-/* .vfrc-chat--dialog {
-  height: calc(100% - 200px);
-} */
+.vfrc-system-response {
+  padding: 0 10px !important;
+}
 
 .vfrc-timestamp {
-  width: 30px !important;
+  width: 20px !important;
+  margin-left: 4px !important;
 }
 
 /* Mobile Styles */
@@ -264,23 +264,9 @@
     display: none !important;
   } */
 
-  /* .vfrc-chat--dialog {
-    height: calc(100% - 210px);
-  } */
-
   .vfrc-timestamp {
     display: none;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* .vfrc-prompt {
-    bottom: 120px !important;
-  } */
-
-  /* .vfrc-chat--dialog {
-    height: calc(100% - 250px);
-  } */
 }
 
 @media (min-width: 1920px),
@@ -340,22 +326,22 @@
 }
 
 #btn-font-increase {
-  position: absolute;
-  top: 70px;
-  left: 20px;
+  top: 5px;
   border-radius: 5px;
   z-index: 1000;
-  padding: 4px 12px;
+  padding: 4px;
+  width: 90%;
+  margin: 5px auto;
   background-color: rgb(85, 96, 110);
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 512px) {
   #btn-font-increase {
-    top: 80px;
+    font-size: 24px;
   }
 }
