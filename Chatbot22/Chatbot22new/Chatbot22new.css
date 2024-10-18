@@ -48,6 +48,11 @@
   margin-right: auto;
 }
 
+#btn-container {
+  width: 426px !important;
+  margin: auto;
+}
+
 /* CHAT MESSAGE BODY */
 .vfrc-message {
   background-color: #ffffff;
@@ -242,6 +247,11 @@
     margin-right: auto;
   }
 
+  #btn-container {
+    width: calc(85% + 36px) !important;
+    margin: auto;
+  }
+
   .vfrc-chat {
     width: 100% !important;
     height: calc(90vh - 60px) !important;
@@ -294,6 +304,13 @@
     margin-right: auto !important;
   }
 
+  #btn-container {
+    width: calc(85% + 36px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+
   .vfrc-chat {
     width: 100% !important;
     height: calc(100% - 50px) !important;
@@ -326,22 +343,15 @@
 }
 
 #btn-font-increase {
-  top: 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   z-index: 1000;
   padding: 4px;
-  width: 90%;
-  margin: 5px auto;
+  width: 110px;
+  margin: 5px 0px;
   background-color: rgb(85, 96, 110);
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
-  font-size: 28px;
-  font-weight: 900;
-}
-
-@media screen and (max-width: 512px) {
-  #btn-font-increase {
-    font-size: 24px;
-  }
+  font-size: 17px;
+  font-weight: 700;
 }
