@@ -31,7 +31,7 @@
 
 
 .vfrc-header {
-  background: #55606e;
+  background: #003145;
   /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   color: #ffffff;
   /* Weiß */
@@ -81,9 +81,9 @@
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
-  background-color: #003145;
+  background-color: #c3ffc3;
   /* Angepasst von #f39206 Orange zu #d2ac4b */
-  color: #ffffff;
+  color: #000000;
   /* Weiß */
   padding: 8px;
   /* Reduzierte Innenabstände */
@@ -277,6 +277,10 @@
   .vfrc-timestamp {
     display: none;
   }
+
+  .vfrc-user-response--row {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 1920px),
@@ -345,10 +349,10 @@
 #btn-font-increase {
   border-radius: 20px;
   z-index: 1000;
-  padding: 4px;
-  width: 110px;
+  padding: 6px;
+  width: 120px;
   margin: 5px 0px;
-  background-color: rgb(85, 96, 110);
+  background-color: #003145;
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
