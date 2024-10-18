@@ -81,7 +81,7 @@
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
-  background-color: #c3ffc3;
+  background-color: #25D366;
   /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #000000;
   /* Weiß */
@@ -347,10 +347,12 @@
 }
 
 #btn-font-increase {
+  display: flex;
+  align-items: center;
   border-radius: 20px;
   z-index: 1000;
   padding: 6px;
-  width: 120px;
+  width: 140px;
   margin: 5px 0px;
   background-color: #003145;
   color: rgb(255, 255, 255);
@@ -358,4 +360,8 @@
   cursor: pointer;
   font-size: 17px;
   font-weight: 700;
+}
+
+#magnifier-container {
+  font-size: 32px;
 }
