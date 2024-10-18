@@ -3,7 +3,7 @@
     s = d.getElementsByTagName(t)[0];
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "6670a21f3c0374134484b65a" },
+      verify: { projectID: "66fef165763573dafb272179" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       assistant: {
