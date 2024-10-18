@@ -3,7 +3,7 @@
     s = d.getElementsByTagName(t)[0];
   v.onload = function () {
     window.voiceflow.chat.load({
-      verify: { projectID: "66fef165763573dafb272179" },
+      verify: { projectID: "6670a21f3c0374134484b65a" },
       url: "https://general-runtime.voiceflow.com",
       versionID: "production",
       assistant: {
@@ -22,12 +22,6 @@ var shadowRoot,
   fontSize = 15;
 
 window.addEventListener("load", function () {
-  if (window.innerWidth >= 1024) {
-    setTimeout(function () {
-      window.voiceflow.chat.open();
-    }, 2000);
-  }
-
   shadowRootIntervalID = this.setInterval(function () {
     searchShadowRoot();
   }, 100);
@@ -104,14 +98,19 @@ const addFontSizeButtonToShadowDom = () => {
   console.log("Add Font Size Button");
   if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
     // Create the button element
+    const buttonContainer = document.createElement("div");
+    buttonContainer.id = "btn-container";
+
     const fontSizeButton = document.createElement("button");
     fontSizeButton.id = "btn-font-increase";
     fontSizeButton.textContent = "Increase Font Size";
 
+    buttonContainer.appendChild(fontSizeButton);
+
     // Append the button to the shadow DOM, within the chatbot's container
     const chatContainer = shadowRoot.querySelector(".vfrc-header");
     if (chatContainer) {
-      chatContainer.insertAdjacentElement("afterend", fontSizeButton)
+      chatContainer.insertAdjacentElement("afterend", buttonContainer);
 
       // Add event listener to increase font size when clicked
       fontSizeButton.addEventListener("click", increaseFontSizeInShadowDom);
