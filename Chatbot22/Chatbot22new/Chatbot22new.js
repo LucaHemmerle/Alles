@@ -103,7 +103,7 @@ const addFontSizeButtonToShadowDom = () => {
 
     const fontSizeButton = document.createElement("button");
     fontSizeButton.id = "btn-font-increase";
-    fontSizeButton.textContent = "Increase Font Size";
+    fontSizeButton.textContent = "Increase Font Size 🔍";
 
     buttonContainer.appendChild(fontSizeButton);
 
