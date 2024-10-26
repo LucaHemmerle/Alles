@@ -6,7 +6,7 @@
       url: 'https://general-runtime.voiceflow.com',
       versionID: 'production',
       assistant: {
-        stylesheet: 'https://www.estatebotics.de/EstateBotics/EstateBotics.css'
+        stylesheet: 'https://www.estatebotics.de/EstateBotics/EstateBoticsAd.css'
       }
     });
   };
