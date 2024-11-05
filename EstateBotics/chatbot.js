@@ -2,11 +2,11 @@
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
   v.onload = function() {
     window.voiceflow.chat.load({
-      verify: { projectID: '65dcaccc44d28e465d1122fc' },
+      verify: { projectID: '671fa9b30a0ccb218be2f6fd' },
       url: 'https://general-runtime.voiceflow.com',
       versionID: 'production',
       assistant: {
-        stylesheet: 'https://www.estatebotics.de/EstateBotics/EstateBoticsAd.css'
+        stylesheet: 'https://www.estatebotics.de/EstateBotics/EstateBotics.css'
       }
     });
   };
