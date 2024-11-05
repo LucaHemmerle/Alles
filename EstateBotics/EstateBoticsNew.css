@@ -1,0 +1,367 @@
+/* PAGE CONTENTS */
+.voiceflow-chat {
+  font-size: 16px;
+  color: #212020;
+  /* Angepasst von Dunkelgrau #3c393d zu #212020 */
+}
+
+.vfrc-widget--chat.c-fikloo {
+  width: 450px !important;
+  height: 890px !important;
+  max-height: none !important;
+  /* Überschreibt die max-height von 800px */
+}
+
+
+.vfrc-widget--chat {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #ffffff;
+  /* Weiß */
+  width: 450px;
+  height: 850px !important;
+  max-height: none !important;
+  border-radius: 25px;
+  right: 2px;
+  bottom: 60px;
+  position: fixed;
+  border: 1px solid transparent;
+}
+
+
+.vfrc-header {
+  background: #c6ac69;
+  /* Angepasst von #3c393d Dunkelgrau zu #c6ac69 */
+  color: #ffffff;
+  /* Weiß */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: 1px solid transparent;
+  /* margin-top: 5px; */
+  width: 390px !important;
+  height: 60px;
+  /* Neue Höhe für den Header */
+  flex-shrink: 0;
+  /* Verhindert das Schrumpfen des Headers */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btn-container {
+  width: 426px !important;
+  margin: auto;
+}
+
+/* CHAT MESSAGE BODY */
+.vfrc-message {
+  background-color: #ffffff;
+  /* Weiß */
+  color: #212020;
+  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
+  border-radius: 7.5px;
+  border: 1px solid transparent;
+  padding: 8px;
+  /* Reduzierte Innenabstände */
+  line-height: 1.2;
+  /* Kleinere Zeilenhöhe */
+}
+
+/* ASSISTANT RESPONSES */
+.vfrc-system-response .vfrc-message {
+  background-color: #d0d0d0;
+  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  color: #000000;
+  /* Schwarz */
+  padding: 8px;
+  /* Reduzierte Innenabstände */
+  line-height: 1.2;
+  /* Kleinere Zeilenhöhe */
+}
+
+/* USER RESPONSES */
+.vfrc-user-response .vfrc-message {
+  background-color: #c6ac69;
+  /* Angepasst von #f39206 Orange zu #c6ac69 */
+  color: #000000;
+  /* Schwarz */
+  padding: 8px;
+  /* Reduzierte Innenabstände */
+  line-height: 1.2;
+  /* Kleinere Zeilenhöhe */
+}
+
+/* FOOTER */
+.vf-footer {
+  background: #d0d0d0;
+  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  color: #ffffff;
+  /* Weiß */
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+/* INPUT FELD */
+.vfrc-input {
+  background-color: #ffffff;
+  /* Weiß */
+  color: #212020;
+  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
+  border: 1px solid transparent;
+  /* Angepasst von transparent zu #212020 für sichtbare Umrandung */
+}
+
+/* BUTTONS */
+.vfrc-button {
+  background-color: #c6ac69;
+  /* Angepasst von Blau zu #c6ac69 */
+  color: #ffffff;
+  /* Weiß */
+  border-radius: 25px;
+}
+
+.vfrc-button:hover {
+  background-color: #212020;
+  /* Dunkelgrau beim Hover */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.4);
+    /* Grundgröße */
+  }
+
+  50% {
+    transform: scale(1.6);
+    /* 60% größer als die Grundgröße */
+  }
+
+  100% {
+    transform: scale(1.4);
+    /* Zurück zur Grundgröße */
+  }
+}
+
+.vfrc-launcher {
+  transform: scale(1.1);
+  /* Grundgröße um 60% erhöhen */
+  animation: pulse 2s infinite;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+
+.vfrc-launcher img {
+  transform: scale(1.2);
+  /* Vergrößert nur das Bild um 60% */
+}
+
+.vfrc-chat {
+  width: 450px;
+  height: 850px !important;
+  /* Erhöhte feste Höhe in Pixel */
+  flex-grow: 1;
+  /* Lässt den Chat den verfügbaren Platz ausfüllen */
+  border-radius: 25px;
+  right: 2px;
+  bottom: 40px;
+  position: fixed;
+  border: 1px solid transparent;
+}
+
+.vfrc-chat--overlay {
+  width: 450px;
+  height: calc(850px - 60px) !important;
+  /* Höhe des Chats um die Höhe des Headers verringern */
+  border-radius: 25px;
+  right: 2px;
+  bottom: 40px;
+  position: fixed;
+  border: 1px solid transparent;
+}
+
+.vfrc-launcher-notification {
+  position: absolute;
+  top: -10px;
+  /* Positioniert die Blase über dem Chat-Button */
+  right: -10px;
+  /* Positioniert die Blase rechts vom Chat-Button */
+  background-color: #c6ac69;
+  /* Angepasst von Blau zu #c6ac69 */
+  color: white;
+  /* Weiße Textfarbe */
+  border-radius: 50%;
+  /* Runde Form */
+  width: 20px;
+  /* Breite der Blase */
+  height: 20px;
+  /* Höhe der Blase */
+  text-align: center;
+  /* Zentriert den Text */
+  line-height: 20px;
+  /* Vertikale Ausrichtung des Textes */
+  font-size: 12px;
+  /* Schriftgröße */
+  z-index: 1001;
+  /* Stellt sicher, dass die Blase über anderen Elementen liegt */
+}
+
+.vfrc-system-response {
+  padding: 0 10px !important;
+}
+
+.vfrc-timestamp {
+  width: 20px !important;
+  margin-left: 4px !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .vfrc-widget--chat {
+    width: 90vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
+    position: fixed !important;
+    top: 5vh !important;
+    left: 5vw !important;
+    right: auto !important;
+    bottom: auto !important;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff !important;
+  }
+
+  .vfrc-widget--chat.c-fikloo {
+    width: 90vw !important;
+    height: 90vh !important;
+    max-height: 90vh !important;
+  }
+
+  .vfrc-header {
+    width: 85% !important;
+    height: 60px !important;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #btn-container {
+    width: calc(85% + 36px) !important;
+    margin: auto;
+  }
+
+  .vfrc-chat {
+    width: 100% !important;
+    height: calc(90vh - 60px) !important;
+    flex-grow: 1;
+    /* overflow-y: auto; */
+  }
+
+  .vfrc-chat--overlay {
+    width: 100% !important;
+    height: calc(90vh - 60px) !important;
+    flex-grow: 1;
+  }
+
+  .vfrc-launcher img {
+    transform: scale(1) !important;
+  }
+
+  /* Hide Cancel Button */
+  /* .c-bXTvXv-igaDqE-type-subtle {
+    display: none !important;
+  } */
+
+  .vfrc-timestamp {
+    display: none;
+  }
+
+  .vfrc-user-response--row {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1920px),
+(min-width: 1024px) and (max-device-width: 1920px) {
+  .vfrc-widget--chat {
+    width: 32% !important;
+    height: 94% !important;
+    max-height: none !important;
+    right: 1% !important;
+    bottom: 2% !important;
+  }
+
+  .vfrc-widget--chat.c-fikloo {
+    width: 32% !important;
+    height: 96% !important;
+    max-height: none !important;
+    right: 1% !important;
+    bottom: 2% !important;
+  }
+
+  .vfrc-header {
+    width: 85% !important;
+    height: 50px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #btn-container {
+    width: calc(85% + 36px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+
+  .vfrc-chat {
+    width: 100% !important;
+    height: calc(100% - 50px) !important;
+    flex-grow: 1;
+    /* overflow-y: auto; */
+  }
+
+  .vfrc-chat--overlay {
+    width: 100% !important;
+    height: calc(100% - 50px) !important;
+    flex-grow: 1;
+  }
+
+  /* Hide Cancel Button */
+  /* .c-bXTvXv-igaDqE-type-subtle {
+    display: none !important;
+  } */
+
+  .vfrc-prompt {
+    width: 97% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .vfrc-footer {
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+#btn-font-increase {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  z-index: 1000;
+  padding: 6px;
+  width: 140px;
+  margin: 5px 0px;
+  background-color: #c6ac69;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+#magnifier-container {
+  font-size: 32px;
+}
