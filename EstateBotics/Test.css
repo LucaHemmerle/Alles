@@ -36,12 +36,9 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
-  /* margin-top: 5px; */
   width: 390px !important;
   height: 60px;
-  /* Neue Höhe für den Header */
   flex-shrink: 0;
-  /* Verhindert das Schrumpfen des Headers */
   margin-left: auto;
   margin-right: auto;
 }
@@ -56,45 +53,32 @@
   background-color: #ffffff;
   /* Weiß */
   color: #212020;
-  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
   border: 1px solid transparent;
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #d0d0d0;
-  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
   color: #000000;
-  /* Schwarz */
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
   background-color: #25D366;
-  /* Angepasst von #f39206 Orange zu #d2ac4b */
   color: #000000;
-  /* Weiß */
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* FOOTER */
 .vf-footer {
   background: #d0d0d0;
-  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
   color: #ffffff;
-  /* Weiß */
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -102,38 +86,32 @@
 /* INPUT FELD */
 .vfrc-input {
   background-color: #ffffff;
-  /* Weiß */
   color: #212020;
-  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border: 1px solid transparent;
-  /* Angepasst von transparent zu #212020 für sichtbare Umrandung */
 }
 
 /* BUTTONS */
 .vfrc-button {
   background-color: #003145;
-  /* Orange */
   color: #ffffff;
-  /* Weiß */
   border-radius: 25px;
 }
 
 .vfrc-button:hover {
-  background-color: #212020;
-  /* Dunkelgrau beim Hover */
+  background-color: #007bff; /* Blauton für stärkeren Kontrast */
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(1.4);
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.6);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1.4);
   }
 }
 
@@ -147,7 +125,7 @@
 
 @keyframes attention {
   0%, 80% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 
   85%, 90% {
@@ -155,7 +133,7 @@
   }
 
   95%, 100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 
@@ -163,12 +141,13 @@
   transform: scale(1.2);
 }
 
+/* Bubble mit WhatsApp-Benachrichtigungsfarbe */
 .vfrc-launcher::after {
-  content: "Neu!";
+  content: "Hey!";
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: #d9534f;
+  background-color: #25D366; /* WhatsApp-Grün */
   color: white;
   border-radius: 50%;
   width: 30px;
