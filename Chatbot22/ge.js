@@ -132,12 +132,8 @@ const addFontSizeButtonToShadowDom = () => {
     // Append the button to the shadow DOM, within the chatbot's container
     const chatContainer = shadowRoot.querySelector(".vfrc-header");
 
-    console.log("Chat Container: ", {chatContainer});
-
     if (chatContainer) {
       chatContainer.insertAdjacentElement("afterend", buttonContainer);
-
-      console.log("Chat Container: ", {chatContainer});
 
       // Add event listener to increase font size when clicked
       fontSizeButton.addEventListener("click", increaseFontSizeInShadowDom);
