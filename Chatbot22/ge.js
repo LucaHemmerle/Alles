@@ -26,10 +26,6 @@ window.addEventListener("load", function () {
     searchShadowRoot();
   }, 2000);
 
-  // fontButtonIntervalID = setInterval(function () {
-  //   addFontSizeButtonToShadowDom();
-  // }, 100);
-
   var config = {
     attributes: true,
     childList: true,
@@ -47,25 +43,10 @@ window.addEventListener("load", function () {
       observer.observe(element.shadowRoot, config);
       shadowRoot = element.shadowRoot;
       clearInterval(shadowRootIntervalID);
-      console.log(shadowRoot);
+      modifyShadowDomTimestamps();
 
       addFontSizeButtonToShadowDom();
     })
-    // document.querySelectorAll("*").forEach((element) => {
-    //   // No shadow root? Continue.
-    //   if (!element.shadowRoot) {
-    //     return;
-    //   }
-
-    //   if (element.id === "voiceflow-chat") {
-    //     observer.observe(element.shadowRoot, config);
-    //     shadowRoot = element.shadowRoot;
-    //     clearInterval(shadowRootIntervalID);
-    //     console.log(shadowRoot);
-
-    //     addFontSizeButtonToShadowDom();
-    //   }
-    // });
   };
 });
 
@@ -86,9 +67,6 @@ const convertTo24Hour = (timeString) => {
 var callback = function (mutationsList) {
   for (var mutation of mutationsList) {
     if (mutation.type == "childList") {
-      // console.log(mutation.addedNodes);
-      // modifyShadowDomTimestamps();
-
       mutation.addedNodes.forEach((node) => {
         if (node.classList && (node.classList.contains("vfrc-system-response") || node.classList.contains("vfrc-user-response"))) {
           const timestamps = node.querySelectorAll(".vfrc-timestamp");
@@ -105,16 +83,6 @@ var callback = function (mutationsList) {
           });
         }
       })
-
-      // mutation.addedNodes.forEach((node) => {
-      //   if (node.classList && node.classList.contains("vfrc-system-response")) {
-      //     chatContainer = shadowRoot.querySelector(".vfrc-chat--dialog");
-
-      //     setTimeout(() => {
-      //       chatContainer.scrollTop = node.offsetTop - chatContainer.offsetTop;
-      //     }, 1000);
-      //   }
-      // });
     }
   }
 };
@@ -137,7 +105,6 @@ const modifyShadowDomTimestamps = () => {
 };
 
 const addFontSizeButtonToShadowDom = () => {
-  console.log("Add Font Size Button");
   if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
     // Create the button element
     const buttonContainer = document.createElement("div");
@@ -177,4 +144,3 @@ const increaseFontSizeInShadowDom = () => {
     });
   }
 };
-
