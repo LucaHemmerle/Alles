@@ -22,13 +22,9 @@ var shadowRoot,
   fontSize = 15;
 
 window.addEventListener("load", function () {
-  shadowRootIntervalID = this.setInterval(function () {
+  shadowRootIntervalID = setInterval(() => {
     searchShadowRoot();
-  }, 100);
-
-  fontButtonIntervalID = setInterval(function () {
-    addFontSizeButtonToShadowDom();
-  }, 100);
+  }, 2000);
 
   var config = {
     attributes: true,
@@ -39,19 +35,17 @@ window.addEventListener("load", function () {
   var observer = new MutationObserver(callback);
 
   const searchShadowRoot = () => {
-    console.log("Find Shadow Root");
-    document.querySelectorAll("*").forEach((element) => {
-      // No shadow root? Continue.
+    document.querySelectorAll("#voiceflow-chat").forEach((element) => {
       if (!element.shadowRoot) {
         return;
       }
 
-      if (element.id === "voiceflow-chat") {
-        observer.observe(element.shadowRoot, config);
-        shadowRoot = element.shadowRoot;
-        clearInterval(shadowRootIntervalID);
-      }
-    });
+      observer.observe(element.shadowRoot, config);
+      shadowRoot = element.shadowRoot;
+      clearInterval(shadowRootIntervalID);
+      modifyShadowDomTimestamps();
+      addFontSizeButtonToShadowDom();
+    })
   };
 });
 
@@ -72,13 +66,36 @@ const convertTo24Hour = (timeString) => {
 var callback = function (mutationsList) {
   for (var mutation of mutationsList) {
     if (mutation.type == "childList") {
-      modifyShadowDomTimestamps();
+      mutation.addedNodes.forEach((node) => {
+        if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
+          addFontSizeButtonToShadowDom();
+        }
+
+        if (node.classList && (node.classList.contains("vfrc-system-response") || node.classList.contains("vfrc-user-response"))) {
+          const timestamps = node.querySelectorAll(".vfrc-timestamp");
+
+          timestamps.forEach(function (timestamp) {
+            const timeText = timestamp.textContent.trim(); // e.g., "12:41 pm"
+            timestamp.textContent = convertTo24Hour(timeText); // Update with 24-hour format
+          });
+      
+          const messages = node.querySelectorAll(".vfrc-message");
+      
+          messages.forEach(function (message) {
+            message.style.fontSize = fontSize + "px";
+          });
+        }
+      })
     }
   }
 };
 
 const modifyShadowDomTimestamps = () => {
   if (shadowRoot) {
+    if (!shadowRoot.getElementById("btn-font-increase")) {
+      addFontSizeButtonToShadowDom();
+    }
+
     const timestamps = shadowRoot.querySelectorAll(".vfrc-timestamp");
 
     timestamps.forEach(function (timestamp) {
@@ -95,7 +112,6 @@ const modifyShadowDomTimestamps = () => {
 };
 
 const addFontSizeButtonToShadowDom = () => {
-  console.log("Add Font Size Button");
   if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
     // Create the button element
     const buttonContainer = document.createElement("div");
@@ -115,13 +131,12 @@ const addFontSizeButtonToShadowDom = () => {
 
     // Append the button to the shadow DOM, within the chatbot's container
     const chatContainer = shadowRoot.querySelector(".vfrc-header");
+
     if (chatContainer) {
       chatContainer.insertAdjacentElement("afterend", buttonContainer);
 
       // Add event listener to increase font size when clicked
       fontSizeButton.addEventListener("click", increaseFontSizeInShadowDom);
-
-      clearInterval(fontButtonIntervalID);
     }
   }
 };
