@@ -44,7 +44,6 @@ window.addEventListener("load", function () {
       shadowRoot = element.shadowRoot;
       clearInterval(shadowRootIntervalID);
       modifyShadowDomTimestamps();
-
       addFontSizeButtonToShadowDom();
     })
   };
@@ -68,6 +67,10 @@ var callback = function (mutationsList) {
   for (var mutation of mutationsList) {
     if (mutation.type == "childList") {
       mutation.addedNodes.forEach((node) => {
+        if (shadowRoot && !shadowRoot.getElementById("btn-font-increase")) {
+          addFontSizeButtonToShadowDom();
+        }
+
         if (node.classList && (node.classList.contains("vfrc-system-response") || node.classList.contains("vfrc-user-response"))) {
           const timestamps = node.querySelectorAll(".vfrc-timestamp");
 
@@ -89,6 +92,10 @@ var callback = function (mutationsList) {
 
 const modifyShadowDomTimestamps = () => {
   if (shadowRoot) {
+    if (!shadowRoot.getElementById("btn-font-increase")) {
+      addFontSizeButtonToShadowDom();
+    }
+
     const timestamps = shadowRoot.querySelectorAll(".vfrc-timestamp");
 
     timestamps.forEach(function (timestamp) {
@@ -125,8 +132,12 @@ const addFontSizeButtonToShadowDom = () => {
     // Append the button to the shadow DOM, within the chatbot's container
     const chatContainer = shadowRoot.querySelector(".vfrc-header");
 
+    console.log("Chat Container: ", {chatContainer});
+
     if (chatContainer) {
       chatContainer.insertAdjacentElement("afterend", buttonContainer);
+
+      console.log("Chat Container: ", {chatContainer});
 
       // Add event listener to increase font size when clicked
       fontSizeButton.addEventListener("click", increaseFontSizeInShadowDom);
