@@ -6,12 +6,11 @@
 }
 
 .vfrc-widget--chat.c-fikloo {
-  width: 450px !important;
+  width: 720px !important; /* Breite um 60% erhöht von 450px auf 720px */
   height: 890px !important;
   max-height: none !important;
   /* Überschreibt die max-height von 800px */
 }
-
 
 .vfrc-widget--chat {
   display: flex;
@@ -19,7 +18,7 @@
   flex-direction: column;
   background-color: #ffffff;
   /* Weiß */
-  width: 450px;
+  width: 720px; /* 450px * 1,6 = 720px */
   height: 850px !important;
   max-height: none !important;
   border-radius: 25px;
@@ -29,7 +28,6 @@
   border: 1px solid transparent;
 }
 
-
 .vfrc-header {
   background: #c6ac69;
   /* Angepasst von #3c393d Dunkelgrau zu #c6ac69 */
@@ -38,18 +36,16 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border: 1px solid transparent;
-  /* margin-top: 5px; */
-  width: 390px !important;
+  width: 624px !important; /* 390px * 1,6 = 624px */
   height: 60px;
-  /* Neue Höhe für den Header */
+  /* Neue Höhe für den Header bleibt gleich */
   flex-shrink: 0;
-  /* Verhindert das Schrumpfen des Headers */
   margin-left: auto;
   margin-right: auto;
 }
 
 #btn-container {
-  width: 426px !important;
+  width: 682px !important; /* 426px * 1,6 ≈ 682px */
   margin: auto;
 }
 
@@ -58,45 +54,35 @@
   background-color: #ffffff;
   /* Weiß */
   color: #212020;
-  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border-radius: 7.5px;
   border: 1px solid transparent;
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* ASSISTANT RESPONSES */
 .vfrc-system-response .vfrc-message {
   background-color: #d0d0d0;
-  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  /* Angepasst von #c5c7ca zu #d0d0d0 */
   color: #000000;
-  /* Schwarz */
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* USER RESPONSES */
 .vfrc-user-response .vfrc-message {
   background-color: #c6ac69;
-  /* Angepasst von #f39206 Orange zu #c6ac69 */
+  /* Angepasst von #f39206 zu #c6ac69 */
   color: #ffffff;
-  /* Schwarz */
   padding: 8px;
-  /* Reduzierte Innenabstände */
   line-height: 1.2;
-  /* Kleinere Zeilenhöhe */
 }
 
 /* FOOTER */
 .vf-footer {
   background: #d0d0d0;
-  /* Angepasst von #c5c7ca Hellgrau zu #d0d0d0 */
+  /* Angepasst von #c5c7ca zu #d0d0d0 */
   color: #ffffff;
-  /* Weiß */
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -104,11 +90,8 @@
 /* INPUT FELD */
 .vfrc-input {
   background-color: #ffffff;
-  /* Weiß */
   color: #212020;
-  /* Angepasst von #3c393d Dunkelgrau zu #212020 */
   border: 1px solid transparent;
-  /* Angepasst von transparent zu #212020 für sichtbare Umrandung */
 }
 
 /* BUTTONS */
@@ -116,7 +99,6 @@
   background-color: #c6ac69;
   /* Angepasst von Blau zu #c6ac69 */
   color: #ffffff;
-  /* Weiß */
   border-radius: 25px;
 }
 
@@ -128,23 +110,18 @@
 @keyframes pulse {
   0% {
     transform: scale(1.4);
-    /* Grundgröße */
   }
-
   50% {
     transform: scale(1.6);
-    /* 60% größer als die Grundgröße */
   }
-
   100% {
     transform: scale(1.4);
-    /* Zurück zur Grundgröße */
   }
 }
 
 .vfrc-launcher {
   transform: scale(1.1);
-  /* Grundgröße um 60% erhöhen */
+  /* Grundgröße beibehalten */
   animation: pulse 2s infinite;
   position: fixed;
   bottom: 40px;
@@ -153,15 +130,12 @@
 
 .vfrc-launcher img {
   transform: scale(1.2);
-  /* Vergrößert nur das Bild um 60% */
 }
 
 .vfrc-chat {
-  width: 450px;
+  width: 720px; /* 450px * 1,6 = 720px */
   height: 850px !important;
-  /* Erhöhte feste Höhe in Pixel */
   flex-grow: 1;
-  /* Lässt den Chat den verfügbaren Platz ausfüllen */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
@@ -170,9 +144,9 @@
 }
 
 .vfrc-chat--overlay {
-  width: 450px;
-  height: calc(850px - 60px) !important;
-  /* Höhe des Chats um die Höhe des Headers verringern */
+  width: 720px; /* 450px * 1,6 = 720px */
+  height: calc(850px - 60px) !important; 
+  /* Höhe unverändert */
   border-radius: 25px;
   right: 2px;
   bottom: 40px;
@@ -183,27 +157,16 @@
 .vfrc-launcher-notification {
   position: absolute;
   top: -10px;
-  /* Positioniert die Blase über dem Chat-Button */
   right: -10px;
-  /* Positioniert die Blase rechts vom Chat-Button */
   background-color: #c6ac69;
-  /* Angepasst von Blau zu #c6ac69 */
   color: white;
-  /* Weiße Textfarbe */
   border-radius: 50%;
-  /* Runde Form */
   width: 20px;
-  /* Breite der Blase */
   height: 20px;
-  /* Höhe der Blase */
   text-align: center;
-  /* Zentriert den Text */
   line-height: 20px;
-  /* Vertikale Ausrichtung des Textes */
   font-size: 12px;
-  /* Schriftgröße */
   z-index: 1001;
-  /* Stellt sicher, dass die Blase über anderen Elementen liegt */
 }
 
 .vfrc-system-response {
@@ -256,7 +219,6 @@
     width: 100% !important;
     height: calc(90vh - 60px) !important;
     flex-grow: 1;
-    /* overflow-y: auto; */
   }
 
   .vfrc-chat--overlay {
@@ -268,11 +230,6 @@
   .vfrc-launcher img {
     transform: scale(1) !important;
   }
-
-  /* Hide Cancel Button */
-  /* .c-bXTvXv-igaDqE-type-subtle {
-    display: none !important;
-  } */
 
   .vfrc-timestamp {
     display: none;
@@ -313,13 +270,11 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  
 
   .vfrc-chat {
     width: 100% !important;
     height: calc(100% - 50px) !important;
     flex-grow: 1;
-    /* overflow-y: auto; */
   }
 
   .vfrc-chat--overlay {
@@ -327,11 +282,6 @@
     height: calc(100% - 50px) !important;
     flex-grow: 1;
   }
-
-  /* Hide Cancel Button */
-  /* .c-bXTvXv-igaDqE-type-subtle {
-    display: none !important;
-  } */
 
   .vfrc-prompt {
     width: 97% !important;
