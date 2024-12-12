@@ -19,6 +19,6 @@ window.onload = function() {
   if (window.innerWidth >= 1024) {
     setTimeout(function() {
       window.voiceflow.chat.open();
-    }, 1000);
+    }, 5000);
   }
 };
