@@ -16,9 +16,7 @@
 })(document, 'script');
 
 window.addEventListener("load", function () {
-  if (window.innerWidth >= 1024) {
-    setTimeout(function() {
-      window.voiceflow.chat.open();
-    }, 5000);
-  }
+  setTimeout(function() {
+    window.voiceflow.chat.open();
+  }, 3000);
 });
