@@ -6,12 +6,11 @@
 }
 
 .vfrc-widget--chat.c-fikloo {
-  width: 450px !important;
+  width: 720px !important; /* 60% breiter statt 450px */
   height: 890px !important;
   max-height: none !important;
   /* Überschreibt die max-height von 800px */
 }
-
 
 .vfrc-widget--chat {
   display: flex;
@@ -19,7 +18,7 @@
   flex-direction: column;
   background-color: #ffffff;
   /* Weiß */
-  width: 450px;
+  width: 720px; /* 60% breiter statt 450px */
   height: 850px !important;
   max-height: none !important;
   border-radius: 25px;
@@ -28,7 +27,6 @@
   position: fixed;
   border: 1px solid transparent;
 }
-
 
 .vfrc-header {
   background: #c6ac69;
@@ -39,7 +37,7 @@
   border-top-right-radius: 25px;
   border: 1px solid transparent;
   /* margin-top: 5px; */
-  width: 390px !important;
+  width: 624px !important; /* Proportional zur neuen Breite */
   height: 60px;
   /* Neue Höhe für den Header */
   flex-shrink: 0;
@@ -49,7 +47,7 @@
 }
 
 #btn-container {
-  width: 426px !important;
+  width: 682px !important; /* Proportional zur neuen Breite */
   margin: auto;
 }
 
@@ -157,7 +155,7 @@
 }
 
 .vfrc-chat {
-  width: 450px;
+  width: 720px; /* 60% breiter statt 450px */
   height: 850px !important;
   /* Erhöhte feste Höhe in Pixel */
   flex-grow: 1;
@@ -170,7 +168,7 @@
 }
 
 .vfrc-chat--overlay {
-  width: 450px;
+  width: 720px; /* 60% breiter statt 450px */
   height: calc(850px - 60px) !important;
   /* Höhe des Chats um die Höhe des Headers verringern */
   border-radius: 25px;
@@ -269,11 +267,6 @@
     transform: scale(1) !important;
   }
 
-  /* Hide Cancel Button */
-  /* .c-bXTvXv-igaDqE-type-subtle {
-    display: none !important;
-  } */
-
   .vfrc-timestamp {
     display: none;
   }
@@ -286,7 +279,7 @@
 @media (min-width: 1920px),
 (min-width: 1024px) and (max-device-width: 1920px) {
   .vfrc-widget--chat {
-    width: 32% !important;
+    width: 51% !important; /* Von 32% auf 51% */
     height: 94% !important;
     max-height: none !important;
     right: 1% !important;
@@ -294,7 +287,7 @@
   }
 
   .vfrc-widget--chat.c-fikloo {
-    width: 32% !important;
+    width: 51% !important; /* Von 32% auf 51% */
     height: 96% !important;
     max-height: none !important;
     right: 1% !important;
@@ -313,7 +306,6 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  
 
   .vfrc-chat {
     width: 100% !important;
@@ -327,11 +319,6 @@
     height: calc(100% - 50px) !important;
     flex-grow: 1;
   }
-
-  /* Hide Cancel Button */
-  /* .c-bXTvXv-igaDqE-type-subtle {
-    display: none !important;
-  } */
 
   .vfrc-prompt {
     width: 97% !important;
