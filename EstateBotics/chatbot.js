@@ -21,4 +21,4 @@ window.onload = function() {
       window.voiceflow.chat.open();
     }, 1000);
   }
-};"
+};
