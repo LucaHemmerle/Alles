@@ -15,11 +15,11 @@
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 
-window.onload = function() {
+window.addEventListener("load", function () {
   if (window.innerWidth >= 1024) {
     setTimeout(function() {
-      console.log('Open Function Triggered!');
+      console.log('Open Function Triggered');
       window.voiceflow.chat.open();
     }, 5000);
   }
-};
+});
