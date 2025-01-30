@@ -1,18 +1,32 @@
 (function (d, t) {
-  var v = d.createElement(t),
-    s = d.getElementsByTagName(t)[0];
-  v.onload = function () {
-    window.voiceflow.chat.load({
-      verify: { projectID: "66fef172763573dafb272182" },
-      url: "https://general-runtime.voiceflow.com",
-      versionID: "production",
-      assistant: {
-        stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
-      },
-    });
-  };
+  var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
+  v.async = true;
+
+  if (v.hasAttribute("data-cmp-src")) {
+    window.location.reload(true);
+  }
+  
+  function initVoiceflow() {
+    if (window.voiceflow && window.voiceflow.chat) {
+      window.voiceflow.chat.load({
+        verify: { projectID: "66fef172763573dafb272182" },
+        url: "https://general-runtime.voiceflow.com",
+        versionID: "production",
+        assistant: {
+          stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
+        },
+      });
+    } else {
+      setTimeout(initVoiceflow, 500);
+    }
+  }
+
+  v.addEventListener("load", function() {
+    initVoiceflow();
+  });
   s.parentNode.insertBefore(v, s);
 })(document, "script");
 
