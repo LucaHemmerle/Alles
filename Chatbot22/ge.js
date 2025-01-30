@@ -49,6 +49,9 @@
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
   v.async = true;
+  v.setAttribute("data-cmp-ab", "0"); // Override CMP attributes
+  v.setAttribute("data-cmp-src", ""); // Remove CMP blocking
+  v.setAttribute("class", ""); // Remove lazy loading class
   s.parentNode.insertBefore(v, s);
 })(document, "script");
 
