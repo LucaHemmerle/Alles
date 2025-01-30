@@ -2,6 +2,7 @@
   var v = d.createElement(t),
     s = d.getElementsByTagName(t)[0];
   v.onload = function () {
+    console.log("Script OnLoaded");
     function initVoiceflow() {
       if (window.voiceflow && window.voiceflow.chat) {
         window.voiceflow.chat.load({
