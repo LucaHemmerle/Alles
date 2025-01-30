@@ -20,6 +20,8 @@
     }
   }
 
+  console.log("V Script: ", v);
+
   v.addEventListener("load", function() {
     console.log("Script Loaded Successfully");
     initVoiceflow();
