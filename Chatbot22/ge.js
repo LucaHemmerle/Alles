@@ -1,6 +1,7 @@
 (function (d, t) {
   var v = d.createElement(t),
     s = d.getElementsByTagName(t)[0];
+    console.log("Before Script OnLoaded");
   v.onload = function () {
     console.log("Script OnLoaded");
     function initVoiceflow() {
