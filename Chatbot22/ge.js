@@ -48,6 +48,7 @@
   // };
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
+  v.async = true;
   s.parentNode.insertBefore(v, s);
 })(document, "script");
 
