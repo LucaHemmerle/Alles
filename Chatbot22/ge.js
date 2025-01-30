@@ -113,12 +113,13 @@ window.addEventListener("load", function () {
 
     @media screen and (max-width: 767px) {
       #chat-popover {
-        width: 150px;
+        width: 130px;
         padding: 10px 20px 10px 10px;
       }
 
       #popover-content p {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 16px !important;
       }
 
       #popover-close {
@@ -141,7 +142,7 @@ window.addEventListener("load", function () {
     popover.id = 'chat-popover';
     popover.innerHTML = `
       <div id="popover-content">
-        <p>Selling or buying? 🤔 Renting or letting? I'm Emily, and I have the answers to your real estate questions!</p>
+        <p>Verkaufen oder kaufen? 🤔 Mieten oder vermieten? Ich bin Emily und ich habe die Antworten auf Ihre Immobilienfragen!</p>
         <button id="popover-close">X</button>
       </div>
     `;
