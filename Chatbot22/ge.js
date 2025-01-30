@@ -61,7 +61,125 @@ window.addEventListener("load", function () {
       addFontSizeButtonToShadowDom();
     })
   };
+
+  // Set a 60-second timer
+  this.setTimeout(() => {
+    // Define the CSS as a string
+    const css = `
+    #chat-popover {
+      position: fixed;
+      bottom: 150px; /* Adjust to appear above the chat bubble */
+      right: 20px; /* Adjust to align with chat bubble */
+      width: 200px;
+      padding: 15px 30px 15px 15px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      z-index: 10000;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    /* Content inside the popover */
+    #popover-content {
+      position: relative;
+    }
+
+    #popover-content p {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Close button */
+    #popover-close {
+      position: absolute;
+      top: -5px;
+      right: -25px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    #popover-close:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 767px) {
+      #chat-popover {
+        width: 150px;
+        padding: 10px 20px 10px 10px;
+      }
+
+      #popover-content p {
+        font-size: 12px;
+      }
+
+      #popover-close {
+        right: -20px;
+        font-size: 14px;
+      }
+    }
+    `;
+
+    // Create a <style> element
+    const style = document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+
+    // Append the <style> element to the <head> of the document
+    document.head.appendChild(style);
+
+    // Create popover container
+    const popover = document.createElement('div');
+    popover.id = 'chat-popover';
+    popover.innerHTML = `
+      <div id="popover-content">
+        <p>Selling or buying? 🤔 Renting or letting? I'm Emily, and I have the answers to your real estate questions!</p>
+        <button id="popover-close">X</button>
+      </div>
+    `;
+
+    document.body.appendChild(popover);
+
+    // Fade-in effect
+    popover.style.opacity = '0';
+    this.setTimeout(() => (popover.style.opacity = '1'), 1000);
+    
+    // Event listeners
+    const closeButton = document.getElementById('popover-close');
+    closeButton.addEventListener('click', () => {
+      popover.style.opacity = '0';
+      setTimeout(() => popover.remove(), 500);
+    });
+
+    popover.addEventListener('click', (e) => {
+      if (e.target !== closeButton) {
+        openChat();
+        popover.style.opacity = '0';
+        setTimeout(() => popover.remove(), 500);
+      }
+    });
+
+    const chatBubble = shadowRoot.querySelector('.vfrc-launcher');
+    chatBubble.addEventListener('click', () => {
+      closeButton.click();
+    })
+  }, 60000);
 });
+
+const openChat = () => {
+  const chatBubble = shadowRoot.querySelector('.vfrc-launcher');
+  if (chatBubble) {
+    chatBubble.click();
+  }
+}
 
 const convertTo24Hour = (timeString) => {
   let [time, modifier] = timeString.split(" ");
