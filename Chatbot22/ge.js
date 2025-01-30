@@ -1,60 +1,60 @@
+(function (d, t) {
+  var v = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+    console.log("Before Script OnLoaded");
+
+  function initVoiceflow() {
+    if (window.voiceflow && window.voiceflow.chat) {
+      console.log("Initializing Voiceflow Chat...");
+      window.voiceflow.chat.load({
+        verify: { projectID: "66fef153763573dafb27216e" },
+        url: "https://general-runtime.voiceflow.com",
+        versionID: "production",
+        assistant: {
+          stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
+        },
+      });
+    } else {
+      console.warn("Voiceflow chat not loaded yet, retrying...");
+      setTimeout(initVoiceflow, 500);
+    }
+  }
+
+  v.addEventListener("load", function() {
+    console.log("Script Loaded Successfully");
+    initVoiceflow();
+  });
+  // v.onload = function () {
+  //   console.log("Script OnLoaded");
+  //   function initVoiceflow() {
+  //     if (window.voiceflow && window.voiceflow.chat) {
+  //       window.voiceflow.chat.load({
+  //         verify: { projectID: "66fef153763573dafb27216e" },
+  //         url: "https://general-runtime.voiceflow.com",
+  //         versionID: "production",
+  //         assistant: {
+  //           stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
+  //         },
+  //       });
+  //     } else {
+  //       console.warn("Voiceflow chat not loaded yet, retrying...");
+  //       setTimeout(initVoiceflow, 500);
+  //     }
+  //   }
+
+  //   initVoiceflow();
+  // };
+  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+  v.type = "text/javascript";
+  s.parentNode.insertBefore(v, s);
+})(document, "script");
+
 var shadowRoot,
   fontButtonIntervalID,
   shadowRootIntervalID,
   fontSize = 15;
 
-window.addEventListener("load", function () {
-  (function (d, t) {
-    var v = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-      console.log("Before Script OnLoaded");
-  
-    function initVoiceflow() {
-      if (window.voiceflow && window.voiceflow.chat) {
-        console.log("Initializing Voiceflow Chat...");
-        window.voiceflow.chat.load({
-          verify: { projectID: "66fef153763573dafb27216e" },
-          url: "https://general-runtime.voiceflow.com",
-          versionID: "production",
-          assistant: {
-            stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
-          },
-        });
-      } else {
-        console.warn("Voiceflow chat not loaded yet, retrying...");
-        setTimeout(initVoiceflow, 500);
-      }
-    }
-  
-    v.addEventListener("load", function() {
-      console.log("Script Loaded Successfully");
-      initVoiceflow();
-    });
-    // v.onload = function () {
-    //   console.log("Script OnLoaded");
-    //   function initVoiceflow() {
-    //     if (window.voiceflow && window.voiceflow.chat) {
-    //       window.voiceflow.chat.load({
-    //         verify: { projectID: "66fef153763573dafb27216e" },
-    //         url: "https://general-runtime.voiceflow.com",
-    //         versionID: "production",
-    //         assistant: {
-    //           stylesheet: "https://www.estatebotics.de/Chatbot22/Chatbot22new/Chatbot22new.css",
-    //         },
-    //       });
-    //     } else {
-    //       console.warn("Voiceflow chat not loaded yet, retrying...");
-    //       setTimeout(initVoiceflow, 500);
-    //     }
-    //   }
-  
-    //   initVoiceflow();
-    // };
-    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-    v.type = "text/javascript";
-    s.parentNode.insertBefore(v, s);
-  })(document, "script");
-  
+window.addEventListener("load", function () { 
   shadowRootIntervalID = setInterval(() => {
     searchShadowRoot();
   }, 2000);
