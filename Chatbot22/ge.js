@@ -6,6 +6,10 @@
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
   v.async = true;
+
+  if (v.hasAttribute("data-cmp-src")) {
+    window.location.reload(true);
+  }
   
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
