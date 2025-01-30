@@ -3,6 +3,10 @@
     s = d.getElementsByTagName(t)[0];
     console.log("Before Script OnLoaded");
 
+  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+  v.type = "text/javascript";
+  v.async = true;
+  
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
       console.log("Initializing Voiceflow Chat...");
@@ -46,12 +50,6 @@
 
   //   initVoiceflow();
   // };
-  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-  v.type = "text/javascript";
-  v.async = true;
-  v.setAttribute("data-cmp-ab", "0"); // Override CMP attributes
-  v.setAttribute("data-cmp-src", ""); // Remove CMP blocking
-  v.setAttribute("class", ""); // Remove lazy loading class
   s.parentNode.insertBefore(v, s);
 })(document, "script");
 
