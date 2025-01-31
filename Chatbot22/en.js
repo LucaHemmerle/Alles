@@ -1,10 +1,17 @@
 (function (d, t) {
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
 
+  v.setAttribute("data-cmp-ab", "1");
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
   v.async = true;
-  v.setAttribute("data-cmp-ab", "1");
+
+  if (v.hasAttribute("data-cmp-src")) {
+    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+    v.setAttribute("class", "");
+    v.setAttribute("data-cmp-src", "");
+    v.setAttribute("src", "https://cdn.voiceflow.com/widget/bundle.mjs");
+  }
 
   console.log("V Script Element: ", v);
 
