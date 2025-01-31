@@ -5,6 +5,8 @@
   v.type = "text/javascript";
   v.async = true;
 
+  console.log("V Script Element: ", v);
+
   // if (v.hasAttribute("data-cmp-src")) {
   //   window.location.reload(true);
   // }
