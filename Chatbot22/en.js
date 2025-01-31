@@ -7,6 +7,10 @@
 
   console.log("V Script Element: ", v);
 
+  if (window.hasUserConsented) {
+    console.log("User has given consent.");
+  }
+
   // if (v.hasAttribute("data-cmp-src")) {
   //   window.location.reload(true);
   // }
