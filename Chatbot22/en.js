@@ -13,8 +13,6 @@
     v.setAttribute("src", "https://cdn.voiceflow.com/widget/bundle.mjs");
   }
 
-  console.log("V Script Element: ", v);
-
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
       window.voiceflow.chat.load({
