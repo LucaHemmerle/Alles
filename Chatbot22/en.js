@@ -5,15 +5,6 @@
   v.type = "text/javascript";
   v.async = true;
 
-  setInterval(() => {
-    var vv = d.createElement(t);
-    vv.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-    vv.type = "text/javascript";
-    vv.async = true;
-
-    console.log("VV Script Element: ", vv);
-  }, 1000);
-
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
       window.voiceflow.chat.load({
