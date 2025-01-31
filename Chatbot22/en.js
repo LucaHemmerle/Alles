@@ -4,6 +4,9 @@
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
   v.type = "text/javascript";
   v.async = true;
+  v.setAttribute("data-cmp-ab", "1");
+
+  console.log("V Script Element: ", v);
 
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
