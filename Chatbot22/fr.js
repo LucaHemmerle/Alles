@@ -5,9 +5,9 @@
   v.type = "text/javascript";
   v.async = true;
 
-  if (v.hasAttribute("data-cmp-src")) {
-    window.location.reload(true);
-  }
+  // if (v.hasAttribute("data-cmp-src")) {
+  //   window.location.reload(true);
+  // }
   
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
