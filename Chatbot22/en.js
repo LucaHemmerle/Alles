@@ -5,16 +5,15 @@
   v.type = "text/javascript";
   v.async = true;
 
-  console.log("V Script Element: ", v);
+  setInterval(() => {
+    var vv = d.createElement(t);
+    vv.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+    vv.type = "text/javascript";
+    vv.async = true;
 
-  if (window.hasUserConsented) {
-    console.log("User has given consent.");
-  }
+    console.log("VV Script Element: ", vv);
+  }, 1000);
 
-  // if (v.hasAttribute("data-cmp-src")) {
-  //   window.location.reload(true);
-  // }
-  
   function initVoiceflow() {
     if (window.voiceflow && window.voiceflow.chat) {
       window.voiceflow.chat.load({
