@@ -176,7 +176,7 @@ window.addEventListener("load", function () {
     chatBubble.addEventListener('click', () => {
       closeButton.click();
     })
-  }, 30000);
+  }, 15000);
 });
 
 const openChat = () => {
