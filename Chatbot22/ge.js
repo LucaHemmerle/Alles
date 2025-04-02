@@ -66,8 +66,10 @@ window.addEventListener("load", function () {
     })
   };
 
+  console.log("pre-timeout");
   // Set a 60-second timer
   this.setTimeout(() => {
+    console.log("in-timeout");
     // Define the CSS as a string
     const css = `
     #chat-popover {
