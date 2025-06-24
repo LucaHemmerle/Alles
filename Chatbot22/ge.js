@@ -146,7 +146,7 @@ window.addEventListener("load", function () {
     popover.id = 'chat-popover';
     popover.innerHTML = `
       <div id="popover-content">
-        <p>Verkaufen oder kaufen? 🤔 Mieten oder vermieten? Ich bin Emily und ich habe die Antworten auf Ihre Immobilienfragen!</p>
+        <p>Hi, ich bin Emily 👋 Was suchst du?</p>
         <button id="popover-close">X</button>
       </div>
     `;
